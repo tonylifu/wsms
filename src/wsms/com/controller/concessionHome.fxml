@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <children>
+      <VBox prefHeight="209.0" prefWidth="202.0">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@webstartreklogo.jpg" />
+               </image>
+            </ImageView>
+            <Button id="iphone" fx:id="returnConcHomeBtn" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction91" prefHeight="50.0" prefWidth="130.0" stylesheets="@application.css" text="RETURN" textFill="#341261" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Button id="iphone" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" stylesheets="@application.css" text="Admission Form" textFill="#341261" wrapText="true">
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button id="iphone" fx:id="enterConcessionBtn" defaultButton="true" mnemonicParsing="false" onAction="#handleButtonAction92" prefHeight="40.0" prefWidth="180.0" stylesheets="@application.css" text="Concession Request" textFill="#341261" wrapText="true">
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</HBox>

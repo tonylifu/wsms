@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="628.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <TitledPane animated="false" prefHeight="623.0" prefWidth="717.0" text="Scores Entry" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane gridLinesVisible="true" onMouseMoved="#lendBookInit" prefHeight="597.0" prefWidth="717.0" style="-fx-background-color: lightgray;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="87.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="332.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="298.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="ID No" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="0.0" prefWidth="79.0" text="Verify ID" textFill="#090468" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <TextField fx:id="lendStdID" onMouseExited="#verifyStdId" prefHeight="48.0" prefWidth="332.0" promptText="Enter Student ID and verify record" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="lendStdName" editable="false" prefHeight="48.0" prefWidth="332.0" promptText="Click on verify above..." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Names" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="93.0" text="Class">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="lendStdClass" onMouseEntered="#lendBookComboInit" prefHeight="40.0" prefWidth="118.0" promptText="select option" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="94.0" text="Class Letter">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="lendStdClassLetter" onMouseEntered="#lendBookComboInit" prefHeight="42.0" prefWidth="118.0" promptText="select option" />
+                           </children>
+                        </FlowPane>
+                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="328.0">
+                                 <children>
+                                    <TextField fx:id="lendBookEdition" editable="false" prefHeight="48.0" prefWidth="332.0" promptText="edition">
+                                       <font>
+                                          <Font name="Times New Roman Bold Italic" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="lendYearOfPublication" editable="false" prefHeight="48.0" prefWidth="332.0" promptText="year of publication">
+                                       <font>
+                                          <Font name="Times New Roman Bold Italic" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        
+                        
+                       
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="85.0" prefWidth="94.0" text="Lending Date">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="lendingDate" prefHeight="42.0" prefWidth="141.0" promptText="lending date">
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightgreen;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#findLendBookButton" prefHeight="40.0" prefWidth="71.0" text="Validate" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Button>
+                              <Button mnemonicParsing="false" onAction="#updateLendBookButton" prefHeight="40.0" prefWidth="73.0" text="Update" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Button>
+                              <Button mnemonicParsing="false" onAction="#saveLendBookButton" prefHeight="42.0" prefWidth="71.0" text="Save" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Button>
+                           </items>
+                        </ToolBar>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Student ID">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: pink;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <items>
+                              <Button fx:id="returnLendBookBtn" mnemonicParsing="false" onAction="#handleButtonAction25" prefHeight="40.0" prefWidth="71.0" text="Return" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#deleteLendBookButton" prefHeight="40.0" prefWidth="71.0" text="Delete" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <TextField fx:id="lendLID" prefHeight="46.0" prefWidth="138.0" promptText="stdID + ISBN" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin></TextField>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="LID" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="132.0" prefWidth="95.0" text="Status">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="lendBookStatus" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="book's status">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="85.0" prefWidth="137.0" text="Expected Return Date" textFill="#5b1010">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="expectedReturnDate" prefHeight="42.0" prefWidth="141.0" promptText="expected return date">
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="lendISBN" onMouseExited="#verifyStdId" prefHeight="48.0" prefWidth="332.0" promptText="enter book's ISBN" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="ISBN" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="lendBookTitle" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="book's title" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextArea>
+                        <TextArea fx:id="lendBookAuthors" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="author(s)" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextArea>
+                       
+                       
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </center>
+</BorderPane>

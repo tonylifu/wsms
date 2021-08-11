@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="photoIdPane" gridLinesVisible="true" hgap="2.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="550.0" vgap="2.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <children>
+    <TextField fx:id="photoIdViewIdNo" prefHeight="39.0" prefWidth="353.0" promptText="id number" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="265.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="printPhotoIdCardBtn" layoutX="234.0" layoutY="11.0" minWidth="80.0" mnemonicParsing="false" onAction="#printPhotoIdCardButton" text="Print">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="photoIdCardBtn" defaultButton="true" layoutX="394.0" layoutY="11.0" minWidth="80.0" mnemonicParsing="false" onAction="#photoIdCardButton" text="Submit">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label prefHeight="364.0" prefWidth="151.0" text="This is the property of Kusaki College Yandev. If found, please return to the above address." textAlignment="JUSTIFY" textFill="#610505" wrapText="true" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </GridPane.margin>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Id No" textFill="#610505" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Name" textFill="#610505" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      
+      <TextArea fx:id="photoIdViewName" editable="false" focusTraversable="false" prefHeight="51.0" prefWidth="400.0" promptText="name" style="-fx-background-color: aliceblue;" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+  <Button fx:id="returnPhotoIdBtn" cancelButton="true" minWidth="80.0" mnemonicParsing="false" onAction="#handleButtonAction75" prefHeight="29.0" prefWidth="139.0" text="Return" textFill="#8d0b0b" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+  </Button>
+      <HBox prefHeight="251.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <ImageView fx:id="imageView2PhotoId" fitHeight="295.0" fitWidth="340.0" pickOnBounds="true">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="30.0" right="20.0" top="20.0" />
+               </HBox.margin></ImageView>
+         </children>
+      </HBox>
+      <ImageView fx:id="imageView2PhotoId2" fitHeight="42.0" fitWidth="222.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <ImageView fitHeight="94.0" fitWidth="133.0" pickOnBounds="true" GridPane.halignment="RIGHT">
+         <image>
+            <Image url="@kusaki.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+         <children>
+            <Label alignment="CENTER" prefHeight="37.0" prefWidth="582.0" style="-fx-background-color: red;" text="K U S A K I  C O L L E G E  Y A N D E V" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="582.0" style="-fx-background-color: black;" text="Discipline and devotion" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="23.0" prefWidth="582.0" text="P. O. Box 135, Gboko, Benue State" textFill="#ff0000dd">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" maxWidth="142.0" minWidth="-Infinity" prefWidth="142.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="Infinity" minWidth="-Infinity" prefWidth="402.0" />
+  </columnConstraints>
+  <padding>
+    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+  </padding>
+  <rowConstraints>
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="101.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="48.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="Infinity" minHeight="0.0" prefHeight="48.0" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="389.0" minHeight="-Infinity" prefHeight="315.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="68.0" minHeight="9.0" prefHeight="33.0" vgrow="NEVER" />
+  </rowConstraints>
+</GridPane>

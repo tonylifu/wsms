@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="borderpane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <padding>
+      <Insets top="5.0" />
+   </padding>
+   <center>
+      <GridPane blendMode="MULTIPLY" cacheHint="QUALITY" depthTest="ENABLE" gridLinesVisible="true" hgap="5.0" onMouseMoved="#cbsInfoInitX" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: aliceblue;" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="0.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="10.0" prefWidth="244.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="idLbl2" style="-fx-font-size: 14;" textAlignment="CENTER" GridPane.rowIndex="3" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="100.0" text="CBID" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="IDLbl2" contentDisplay="RIGHT" text="Class" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <TextField id="previousSchool2" fx:id="cbsId" editable="false" prefHeight="32.0" prefWidth="300.0" promptText="change border identifier" style="-fx-background-color: lightgray;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextField>
+            <Label id="dateLbl" contentDisplay="RIGHT" text="Date of Entry" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker id="dateOfReg2" fx:id="cbsEntryDate" editable="false" prefHeight="44.0" prefWidth="150.0" promptText="Select your date of entry" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding></DatePicker>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+              <items>
+                  <Button id="big-yellow2" mnemonicParsing="false" onAction="#deleteChangeBorderStatusButton" prefHeight="34.0" prefWidth="65.0" stylesheets="@application.css" text="Delete" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="big-yellow2" mnemonicParsing="false" onAction="#findChangeBorderStatusButton" prefHeight="34.0" prefWidth="60.0" stylesheets="@application.css" text="Find" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="big-yellow2" mnemonicParsing="false" onAction="#updateChangeBorderStatusButton" prefHeight="34.0" prefWidth="71.0" stylesheets="@application.css" text="Update" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="big-yellow2" defaultButton="true" mnemonicParsing="false" onAction="#submitCbsButton" prefHeight="34.0" prefWidth="70.0" stylesheets="@application.css" text="Submit" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+              </items>
+            </ToolBar>
+          <Button id="big-yellow2" fx:id="returnEnterChangeBorderStatusBtn" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction50" prefHeight="32.0" prefWidth="66.0" stylesheets="@application.css" text="Return" textFill="#240c4a" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label id="IDLbl2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Enter New Border Status" textAlignment="RIGHT" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbsStdClass" onMouseEntered="#createClassesComboInit" prefHeight="37.0" prefWidth="244.0" promptText="std class" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="cbsNewBorderStatus" onMouseEntered="#cbsComboInit" prefHeight="37.0" prefWidth="244.0" promptText="select new border status" style="-fx-background-color: lightgreen;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <Label id="IDLbl2" contentDisplay="RIGHT" layoutX="87.0" layoutY="24.0" text="Year/Term" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="16.0" layoutY="292.0" prefHeight="16.0" prefWidth="100.0" text="Student ID" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField id="previousSchool2" fx:id="cbsStdId" layoutX="126.0" layoutY="284.0" prefHeight="32.0" prefWidth="300.0" promptText="std id" style="-fx-background-color: lightgreen;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="16.0" layoutY="292.0" prefHeight="16.0" prefWidth="100.0" text="Name" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="cbsName" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="name" style="-fx-background-color: lightblue;" wrapText="true" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextArea>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <ComboBox fx:id="cbsYear" onMouseEntered="#cbsComboInit" prefHeight="37.0" prefWidth="244.0" promptText="session" style="-fx-background-color: lightgreen;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="cbsTerm" onMouseEntered="#cbsComboInit" prefHeight="37.0" prefWidth="244.0" promptText="term" style="-fx-background-color: lightgreen;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </GridPane.margin>
+            </HBox>
+            <Label id="IDLbl2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="424.0" layoutY="162.0" text="Current Border Status" textAlignment="RIGHT" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbsCurrentBorderStatus" layoutX="496.0" layoutY="152.0" onMouseEntered="#createClassesComboInit" prefHeight="37.0" prefWidth="244.0" promptText="current border status" style="-fx-background-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+         </children>
+         <effect>
+            <Lighting light="$null">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>

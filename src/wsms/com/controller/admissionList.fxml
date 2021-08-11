@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vboxAdmissionPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="950.0" style="-fx-background-color: red;" text="KUSAKI COLLEGE YANDEV" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="21.0" prefWidth="950.0" style="-fx-background-color: black;" text="ADMISSION ANALYSIS" textFill="WHITE">
+         <font>
+            <Font name="Sitka Banner Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="800.0">
+         <children>
+            <Label id="ladi" fx:id="admLabel" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="123.0" stylesheets="@application.css" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></Label>
+            <ComboBox id="ladi" fx:id="admSessionCmb" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#admListInit" prefHeight="35.0" prefWidth="99.0" promptText="session" stylesheets="@application.css">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></ComboBox>
+            <ComboBox id="ladi" fx:id="admTermCmb" layoutX="151.0" layoutY="22.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#admListInit2" prefHeight="35.0" prefWidth="83.0" promptText="term" stylesheets="@application.css" />
+            <ComboBox id="ladi" fx:id="admClassCmb" layoutX="601.0" layoutY="22.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#admListInit3" prefHeight="35.0" prefWidth="146.0" promptText="class" stylesheets="@application.css" />
+            <ComboBox id="ladi" fx:id="admStatusCmb" layoutX="709.0" layoutY="22.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#admListInit2" prefHeight="35.0" prefWidth="145.0" promptText="status" stylesheets="@application.css" />
+            <DatePicker id="ladi" fx:id="admFroDate" editable="false" prefHeight="35.0" prefWidth="120.0" promptText="fro date" stylesheets="@application.css">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></DatePicker>
+            <DatePicker id="ladi" fx:id="admToDate" editable="false" prefHeight="35.0" prefWidth="120.0" promptText="to date" stylesheets="@application.css">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></DatePicker>
+            <Button id="dark-blue" fx:id="spoolAdmissionListBtn" defaultButton="true" mnemonicParsing="false" onAction="#spoolAdmissionListButton" prefHeight="35.0" prefWidth="79.0" stylesheets="@application.css" text="Spool">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="admissionListDataTable" prefHeight="541.0" prefWidth="890.0">
+         <columns>
+            <TableColumn fx:id="admSNCol" prefWidth="48.0" text="S/No" />
+            <TableColumn fx:id="admFormNoCol" minWidth="0.0" prefWidth="112.0" text="Form No" />
+            <TableColumn fx:id="admNameCol" prefWidth="253.0" text="Name" />
+            <TableColumn fx:id="admSessionCol" prefWidth="90.0" text="Session&#10;" />
+            <TableColumn fx:id="admTermCol" prefWidth="60.0" text="Term" />
+            <TableColumn fx:id="admClassCol" prefWidth="108.0" text="Class" />
+            <TableColumn fx:id="admStatusCol" prefWidth="168.0" text="Admission Status" />
+            <TableColumn fx:id="admDateCol" prefWidth="99.0" text="Date" />
+         </columns>
+      </TableView>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="890.0">
+         <children>
+            <ToolBar prefHeight="36.0" prefWidth="319.0">
+              <items>
+                <Button id="dark-blue" fx:id="printAdmissionBtn" mnemonicParsing="false" onAction="#printAdmissionButton" prefHeight="25.0" prefWidth="90.0" stylesheets="@application.css" text="PRINT" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button id="dark-blue" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#xcelAdmissionButton" prefHeight="25.0" prefWidth="90.0" stylesheets="@application.css" text="EXCEL" textFill="#240951" fx:id="xcelAdmissionBtn">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button id="dark-blue" fx:id="returnAdmissionList" cancelButton="true" layoutX="104.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleButtonAction104" prefHeight="25.0" prefWidth="90.0" stylesheets="@application.css" text="RETURN" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" />
+   </padding>
+</VBox>

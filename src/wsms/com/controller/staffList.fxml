@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="printPaneStaffList" dividerPositions="0.23" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="898.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="92.0" layoutX="49.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@kusaki.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="9.0" prefHeight="39.0" prefWidth="702.0" style="-fx-background-color: red;" text="K U S A K I  C O L L E G E  Y A N D E V" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="56.0" prefHeight="21.0" prefWidth="702.0" style="-fx-background-color: black;" text="Discipline and devotion" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="221.0" layoutY="76.0" prefHeight="0.0" prefWidth="713.0" text="P. O. Box 135, Gboko, Benue State" textFill="#ff0000dd">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="212.0" layoutY="102.0" prefHeight="21.0" prefWidth="653.0" style="-fx-background-color: black;" text="STAFF LIST" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="102.0" prefHeight="21.0" prefWidth="159.0" text="STAFF RECORD">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button id="dark-blue" fx:id="spoolStaffListBtn" layoutX="726.0" layoutY="129.0" mnemonicParsing="false" onAction="#spoolStaffListButton" prefHeight="25.0" prefWidth="142.0" stylesheets="@application.css" text="Spool Staff List" textFill="#10034a">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="errorStaffList_TF" editable="false" layoutX="310.0" layoutY="129.0" prefHeight="25.0" prefWidth="353.0" style="-fx-background-color: white;" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="spoolStaffListDataTable" layoutX="14.0" layoutY="14.0" prefHeight="471.0" prefWidth="859.0" style="-fx-background-color: aliceblue;">
+              <columns>
+                <TableColumn fx:id="staffListSNoCol" prefWidth="38.0" text="S/No" />
+                  <TableColumn fx:id="staffListEmpNoCol" text="Staff Emp No" />
+                  <TableColumn fx:id="staffListNameCol" prefWidth="135.0" text="Names" />
+                  <TableColumn fx:id="staffListSexCol" prefWidth="48.0" text="Sex" />
+                  <TableColumn fx:id="staffListAgeCol" minWidth="0.0" prefWidth="38.0" text="Age" />
+                  <TableColumn fx:id="staffListMaritalCol" prefWidth="66.0" text="Marital &#10;Status" />
+                  <TableColumn fx:id="staffListQualCol" prefWidth="90.0" text="Qualification &#10;with Dates" />
+                  <TableColumn fx:id="staffListSpecCol" prefWidth="85.0" text="Specialization" />
+                  <TableColumn fx:id="staffListPhoneCol" prefWidth="85.0" text="Phone" />
+                  <TableColumn fx:id="staffListEmailCol" prefWidth="103.0" text="Email" />
+                  <TableColumn fx:id="staffNextOfKinCol" prefWidth="90.0" text="Next of Kin&#10;Contact Info" />
+              </columns>
+            </TableView>
+            <Button id="dark-blue" fx:id="returnSpoolStaffListBtn" layoutX="633.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleButtonAction22" prefHeight="30.0" prefWidth="71.0" stylesheets="@application.css" text="Cancel" textFill="#130f3c">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button id="dark-blue" fx:id="genExcelSpoolStaffListBtn" layoutX="709.0" layoutY="496.0" mnemonicParsing="false" onAction="#genExcelStaffListButton" prefHeight="30.0" prefWidth="92.0" stylesheets="@application.css" text="Gen Excel" textFill="#130f3c">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button id="dark-blue" fx:id="printStaffListBtn" layoutX="807.0" layoutY="496.0" mnemonicParsing="false" onAction="#printStaffListButton" prefHeight="30.0" prefWidth="70.0" stylesheets="@application.css" text="Print" textFill="#130f3c">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

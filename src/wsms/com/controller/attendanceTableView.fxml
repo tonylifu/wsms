@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="printAttendPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="900.0" style="-fx-background-color: red;" text="K U S A K I  C O L L E G E  Y A N D E V" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="21.0" prefWidth="900.0" style="-fx-background-color: black;" text="CLASS ATTENDANCE ENTRY FORM" textFill="WHITE">
+         <font>
+            <Font name="Sitka Banner Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="42.0" prefWidth="800.0">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#spoolAttendanceButton" prefHeight="46.0" prefWidth="88.0" text="Spool">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#editSchoolAttendanceButton" prefHeight="42.0" prefWidth="79.0" text="Edit">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <DatePicker fx:id="attendanceDate" editable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="32.0" prefWidth="150.0" promptText="attendance date">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </DatePicker>
+            <ComboBox fx:id="attendanceClass" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#attendanceComboInit" prefHeight="32.0" prefWidth="155.0" promptText="select class" style="-fx-background-color: lightblue;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin></ComboBox>
+            <Label fx:id="attendanceLabel" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="249.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <TableView fx:id="attendanceDataTable" prefHeight="560.0" prefWidth="900.0">
+         <columns>
+            <TableColumn fx:id="attendSNoCol" prefWidth="41.0" text="S/No" />
+            <TableColumn fx:id="attendStdNoCol" prefWidth="140.0" text="Std Id" />
+            <TableColumn fx:id="attendStdNameCol" prefWidth="242.0" text="Name" />
+            <TableColumn fx:id="attendIsPresentCol" prefWidth="76.0" text="Is Present?" />
+            <TableColumn fx:id="attendPresentsCol" prefWidth="96.0" text="Presents&#10;(Current)" />
+            <TableColumn fx:id="attendAbsentsCol" prefWidth="98.0" text="Absents&#10;(Current)" />
+            <TableColumn fx:id="attendTermPossibleCol" prefWidth="104.0" text="Termly &#10;Possible &#10;Attendance" />
+            <TableColumn fx:id="attendTermPossibleCurrentCol" prefWidth="101.0" text="Possible &#10;Attendance &#10;(Current)" />
+         </columns>
+      </TableView>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="800.0">
+         <children>
+            <ToolBar prefHeight="39.0" prefWidth="898.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#refreshSchoolAttendanceButton" prefHeight="29.0" prefWidth="170.0" text="REFRESH" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Button>
+                  <Button layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#xcelSchoolAttendance" prefHeight="25.0" prefWidth="90.0" text="EXCEL" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#attendanceAbsentAllButton" prefHeight="29.0" prefWidth="170.0" text="ABSENT ALL" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="372.0" layoutY="10.0" mnemonicParsing="false" onAction="#attendancePresentAllButton" prefHeight="29.0" prefWidth="170.0" text="PRESENT ALL" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="452.0" layoutY="10.0" mnemonicParsing="false" onAction="#attendanceResetButton" prefHeight="29.0" prefWidth="143.0" text="RESET" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="returnClassAttendanceBtn" cancelButton="true" layoutX="104.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleButtonAction86" prefHeight="25.0" prefWidth="90.0" text="RETURN" textFill="#3c0404">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Button>
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+   </children>
+</VBox>

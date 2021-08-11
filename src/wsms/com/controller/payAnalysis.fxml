@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vboxPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="950.0" style="-fx-background-color: red;" text="KUSAKI COLLEGE YANDEV" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="21.0" prefWidth="950.0" style="-fx-background-color: black;" text="PAYMENT ANALYSIS" textFill="WHITE">
+         <font>
+            <Font name="Sitka Banner Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="800.0">
+         <children>
+            <Label id="ladi" fx:id="payTypeLabel" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="480.0" stylesheets="@application.css" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></Label>
+            <ComboBox id="ladi" fx:id="payAnalTypeCombo" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#payType_Init" prefHeight="35.0" prefWidth="108.0" promptText="pay type" stylesheets="@application.css">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></ComboBox>
+            <DatePicker id="ladi" fx:id="payTypeFroDate" editable="false" prefHeight="35.0" prefWidth="120.0" promptText="fro date" stylesheets="@application.css">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></DatePicker>
+            <DatePicker id="ladi" fx:id="payTypeToDate" editable="false" prefHeight="35.0" prefWidth="120.0" promptText="to date" stylesheets="@application.css">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></DatePicker>
+            <Button id="dark-blue" fx:id="spoolPayTypeAnalBtn" defaultButton="true" mnemonicParsing="false" onAction="#spoolPayTypeAnalysisButton" prefHeight="35.0" prefWidth="88.0" stylesheets="@application.css" text="Spool">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="payAnalysisDataTable" prefHeight="541.0" prefWidth="890.0">
+         <columns>
+            <TableColumn fx:id="payAnalSNCol" prefWidth="48.0" text="S/No" />
+            <TableColumn fx:id="payAnalStdNoCol" minWidth="0.0" prefWidth="112.0" text="Std No" />
+            <TableColumn fx:id="payAnalNameCol" prefWidth="180.0" text="Name" />
+            <TableColumn fx:id="payAnalTypeCol" prefWidth="96.0" text="Payment &#10;Type" />
+            <TableColumn fx:id="payAnalCRCol" prefWidth="95.0" text="CR" />
+            <TableColumn fx:id="payAnalDRCol" prefWidth="99.0" text="DR" />
+            <TableColumn fx:id="payAnalDescCol" prefWidth="209.0" text="Description" />
+            <TableColumn fx:id="payAnalDateCol" prefWidth="99.0" text="Date" />
+         </columns>
+      </TableView>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="890.0">
+         <children>
+            <ToolBar prefHeight="36.0" prefWidth="319.0">
+              <items>
+                <Button id="dark-blue" fx:id="printPayTypeAnalysisBtn" mnemonicParsing="false" onAction="#printPayTypeAnalysisButton" prefHeight="25.0" prefWidth="90.0" stylesheets="@application.css" text="PRINT" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button id="dark-blue" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#xcelPayTypeAnalButton" prefHeight="25.0" prefWidth="90.0" stylesheets="@application.css" text="EXCEL" textFill="#240951" fx:id="xcelPayTypeAnalBtn">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button id="dark-blue" fx:id="returnPayAnalysisBtn" cancelButton="true" layoutX="104.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleButtonAction57" prefHeight="25.0" prefWidth="90.0" stylesheets="@application.css" text="RETURN" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" />
+   </padding>
+</VBox>

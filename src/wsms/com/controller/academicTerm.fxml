@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="700.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <TitledPane animated="false" prefHeight="700.0" prefWidth="717.0" text="Scores Entry" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox fillWidth="false" layoutX="-1.0" layoutY="-6.0" prefHeight="700.0" prefWidth="717.0">
+                     <children>
+                        <GridPane gridLinesVisible="true" prefHeight="220.0" prefWidth="717.0" style="-fx-background-color: #eeeaea;">
+                           <children>
+                              <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <items>
+                                    <Button defaultButton="true" mnemonicParsing="false" onAction="#createCalendarTermButton" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: lightcyan;" text="Save" textFill="DARKBLUE" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateCalendarTermButton" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: lightcyan;" text="Update" textFill="DARKBLUE" underline="true">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#findCalendarTermButton" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: lightcyan;" text="Find" textFill="DARKBLUE" underline="true">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </items>
+                              </ToolBar>
+                              <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="81.0" text="Year / Term" textAlignment="RIGHT" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <items>
+                                    <Button fx:id="returnAcademicTermBtn" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction83" prefHeight="40.0" prefWidth="71.0" text="Return" textFill="#080757">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#deleteCalendarTermButton" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: lightcyan;" text="Delete" textFill="DARKBLUE" underline="true">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </items>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </ToolBar>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <DatePicker fx:id="cTermBegins" prefHeight="48.0" prefWidth="152.0" promptText="term begins">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                    <DatePicker fx:id="cTermEnds" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="152.0" promptText="term ends" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="97.0" layoutY="85.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="84.0" text="Find " textAlignment="RIGHT">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cTerm_ATID" onMouseEntered="#cTermInit2" prefHeight="48.0" prefWidth="151.0" promptText="ATID" style="-fx-background-color: lightblue;" />
+                                 </children>
+                              </HBox>
+                              <Label alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="82.0" text="Term Begins / Term Ends" textAlignment="RIGHT" wrapText="true" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1">
+                                 <children>
+                                    <ComboBox fx:id="cTerm_year" onMouseEntered="#cTermInit" prefHeight="48.0" prefWidth="151.0" promptText="select a year" />
+                                    <ComboBox fx:id="cTerm_term" layoutX="10.0" layoutY="10.0" onMouseEntered="#cTermInit" prefHeight="48.0" prefWidth="151.0" promptText="select a term">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="60.0" text="Display" textFill="#5b1010">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="cTermDisplay" editable="false" prefHeight="75.0" prefWidth="212.0" promptText="description" style="-fx-background-color: aliceblue;" wrapText="true">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </TextArea>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="87.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="332.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="298.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <TableView fx:id="academicSessionDataTable" prefHeight="451.0" prefWidth="677.0">
+                           <columns>
+                              <TableColumn fx:id="eventCol" prefWidth="263.0" text="Events" />
+                              <TableColumn fx:id="timeCol" prefWidth="412.0" text="Time Table" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets left="20.0" top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </center>
+</BorderPane>

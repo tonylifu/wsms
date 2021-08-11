@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <tabs>
+    <Tab text="Delete All Scores">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" onMouseMoved="#delScoresInitA" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="1.0" layoutY="2.0" prefHeight="369.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: lightgreen;">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Student No" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="delScoresStdNo" prefHeight="43.0" prefWidth="189.0" promptText="std no" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="delScoresLabel" prefHeight="74.0" prefWidth="305.0" textAlignment="JUSTIFY" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Std Name" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="delScoresStdName" editable="false" prefHeight="43.0" prefWidth="494.0" promptText="std name" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="186.0" prefWidth="600.0">
+                           <children>
+                              <Label prefHeight="106.0" prefWidth="595.0" text="Please be sure to backup your database before deleting any entity as this process is completely irreversible without a proper backup. " textAlignment="JUSTIFY" textFill="#390808" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                          <items>
+                            <Button disable="true" mnemonicParsing="false" onAction="#delScoresStdActionButton" prefHeight="32.0" prefWidth="101.0" text="Delete" textFill="#221107" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="retDelStdScores" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction90" prefHeight="32.0" prefWidth="101.0" text="RETURN" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                          </items>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Delete Annual Scores">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" onMouseMoved="#delScoresInitB" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="1.0" layoutY="2.0" prefHeight="369.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="79.0" prefWidth="600.0" style="-fx-background-color: orange;">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Student No" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="delScoresStdNo2" prefHeight="43.0" prefWidth="189.0" promptText="std no" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="delScoresLabel2" prefHeight="74.0" prefWidth="305.0" textAlignment="JUSTIFY" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Std Name" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="delScoresStdName2" editable="false" prefHeight="43.0" prefWidth="494.0" promptText="std name" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Session" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="delScoresSession" onMouseEntered="#delScoresInit3" prefHeight="40.0" prefWidth="150.0" promptText="session">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="600.0">
+                           <children>
+                              <Label prefHeight="106.0" prefWidth="595.0" text="Please be sure to backup your database before deleting any entity as this process is completely irreversible without a proper backup. " textAlignment="JUSTIFY" textFill="#390808" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                           <items>
+                              <Button disable="true" mnemonicParsing="false" onAction="#delScoresStdAnnualButton" prefHeight="32.0" prefWidth="101.0" text="Delete" textFill="#221107" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="retDelStdScores2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction90" prefHeight="32.0" prefWidth="101.0" text="RETURN" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Delete Terminal Scores">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" onMouseMoved="#delScoresInitC" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="1.0" layoutY="2.0" prefHeight="369.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="76.0" prefWidth="600.0" style="-fx-background-color: lightblue;">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Student No" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="delScoresStdNo3" prefHeight="43.0" prefWidth="189.0" promptText="std no" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="delScoresLabel3" prefHeight="74.0" prefWidth="305.0" textAlignment="JUSTIFY" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Std Name" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="delScoresStdName3" editable="false" prefHeight="43.0" prefWidth="494.0" promptText="std name" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Session" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="delScoresSession2" onMouseEntered="#delScoresInit2" prefHeight="40.0" prefWidth="150.0" promptText="session">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="88.0" text="Session" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="delScoresTerm" layoutX="103.0" layoutY="18.0" onMouseEntered="#delScoresInit2" prefHeight="40.0" prefWidth="150.0" promptText="term">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="139.0" prefWidth="600.0">
+                           <children>
+                              <Label prefHeight="118.0" prefWidth="595.0" text="Please be sure to backup your database before deleting any entity as this process is completely irreversible without a proper backup. " textAlignment="JUSTIFY" textFill="#390808" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                           <items>
+                              <Button defaultButton="true" mnemonicParsing="false" onAction="#delScoresStdTermButton" prefHeight="32.0" prefWidth="101.0" text="Delete" textFill="#221107" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="retDelStdScores3" cancelButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction90" prefHeight="32.0" prefWidth="101.0" text="RETURN" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Delete Terminal Subject Score">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" onMouseMoved="#delScoresInitD" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="1.0" layoutY="2.0" prefHeight="369.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="76.0" prefWidth="600.0" style="-fx-background-color: brown;">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Student No" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="delScoresStdNo4" prefHeight="43.0" prefWidth="189.0" promptText="std no" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="delScoresLabel4" prefHeight="74.0" prefWidth="305.0" textAlignment="JUSTIFY" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Std Name" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="delScoresStdName4" editable="false" prefHeight="43.0" prefWidth="494.0" promptText="std name" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="59.0" text="Session" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="delScoresSession3" onMouseEntered="#delScoresInitSubj" prefHeight="40.0" prefWidth="100.0" promptText="session">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="60.0" text="Session" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="delScoresTerm2" layoutX="103.0" layoutY="18.0" onMouseEntered="#delScoresInitSubj" prefHeight="40.0" prefWidth="80.0" promptText="term">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Label alignment="CENTER_RIGHT" layoutX="194.0" layoutY="10.0" prefHeight="55.0" prefWidth="60.0" text="Subject" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="delScoresTermSubject" layoutX="259.0" layoutY="18.0" onMouseEntered="#delScoresInitSubj2" prefHeight="40.0" prefWidth="200.0" promptText="subject">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="139.0" prefWidth="600.0">
+                           <children>
+                              <Label prefHeight="118.0" prefWidth="595.0" text="Please be sure to backup your database before deleting any entity as this process is completely irreversible without a proper backup. " textAlignment="JUSTIFY" textFill="#390808" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                           <items>
+                              <Button defaultButton="true" mnemonicParsing="false" onAction="#delScoresStdTermSubjectButton" prefHeight="32.0" prefWidth="101.0" text="Delete" textFill="#221107" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="retDelStdScores4" cancelButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction90" prefHeight="32.0" prefWidth="101.0" text="RETURN" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

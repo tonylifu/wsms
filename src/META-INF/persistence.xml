@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="SchoolMgtSystem">
+	<class>wsms.com.entity.Students</class>
+	<class>wsms.com.entity.ScoreSheets</class>
+	<class>wsms.com.entity.JssScoreSheets</class>
+	<class>wsms.com.entity.SubjectNames</class>
+	<class>wsms.com.entity.Users</class>
+	<class>wsms.com.entity.StudentPayments</class>
+	<class>wsms.com.entity.ScoreSheetsSummary</class>
+	<class>wsms.com.entity.AnnualScoreSheetsSummary</class>
+	<class>wsms.com.entity.AnnualScoresTotal</class>
+	<class>wsms.com.entity.Staff</class>
+	<class>wsms.com.entity.LibraryBooks</class>
+	<class>wsms.com.entity.LendingBook</class>
+	<class>wsms.com.entity.LendingBookCount</class>
+	<class>wsms.com.entity.ReturningBook</class>
+	<class>wsms.com.entity.DefaultPenalty</class>
+	<class>wsms.com.entity.LocalDatePersistenceConverter</class>
+	<class>wsms.com.entity.AccountBalance</class>
+	<class>wsms.com.entity.Transactions</class>
+	<class>wsms.com.entity.BillingsInformation</class>
+	<class>wsms.com.entity.DrugInformation</class>
+	<class>wsms.com.entity.Tills</class>
+	<class>wsms.com.entity.TillTransactions</class>
+	<class>wsms.com.entity.Inventory</class>
+	<class>wsms.com.entity.Invoicing</class>
+	<class>wsms.com.entity.StudentClasses</class>
+	<class>wsms.com.entity.ChangeBorderStatus</class>
+	<class>wsms.com.entity.ChangeStdClass</class>
+	<class>wsms.com.entity.MoveClass2Class</class>
+	<class>wsms.com.entity.MoveStdClass2Class</class>
+	<class>wsms.com.entity.DisciplinaryEntry</class>
+	<class>wsms.com.entity.CommendationEntry</class>
+	<class>wsms.com.entity.SuspensionEntry</class>
+	<class>wsms.com.entity.Suspended</class>
+	<class>wsms.com.entity.RusticateEntry</class>
+	<class>wsms.com.entity.Rusticated</class>
+	<class>wsms.com.entity.CashTransactions</class>
+	<class>wsms.com.entity.TellerTransactions</class>
+	<class>wsms.com.entity.POSTransactions</class>
+	<class>wsms.com.entity.AssignedSubjects</class>
+	<class>wsms.com.entity.BarcodeScannedGate</class>
+	<class>wsms.com.entity.Graduated</class>
+	<class>wsms.com.entity.TransferredWithdrawn</class>
+	<class>wsms.com.entity.Deferred</class>
+	<class>wsms.com.entity.JSSClassResults</class>
+	<class>wsms.com.entity.JSSSubjectsResults</class>
+	<class>wsms.com.entity.SSSClassResults</class>
+	<class>wsms.com.entity.SSSSubjectsResults</class>
+	<class>wsms.com.entity.AnnualSubjectsResults</class>
+	<class>wsms.com.entity.AnnualClassResults</class>
+	<class>wsms.com.entity.AcademicSession</class>
+	<class>wsms.com.entity.AcademicTerm</class>
+	<class>wsms.com.entity.AcademicHoliday</class>
+	<class>wsms.com.entity.AcademicAssessment</class>
+	<class>wsms.com.entity.SchoolAttendance</class>
+	<class>wsms.com.entity.BarcodeScannedSpecial</class>
+	<class>wsms.com.entity.ScoreSheetsSummaryAvg</class>
+	<class>wsms.com.entity.AnnualScoresTotalAvg</class>
+	<class>wsms.com.entity.DESKeys</class>
+	<class>wsms.com.entity.FeeConcession</class>
+	<class>wsms.com.entity.ProspectiveStudent</class>
+	<class>wsms.com.entity.JssScoreSheetsNew</class>
+	<properties>
+	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1/kusakidb?useSSL=false"/>
+	<property name="javax.persistence.jdbc.user" value="root"/>
+	<property name="javax.persistence.jdbc.password" value="root"/>
+	<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+	<property name="eclipselink.logging.level" value="FINE"/>
+	<property name="eclipselink.ddl-generation" value="create-tables"/>
+	</properties>
+	</persistence-unit>
+</persistence>

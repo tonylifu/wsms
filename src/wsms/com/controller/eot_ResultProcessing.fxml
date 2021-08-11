@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <TitledPane animated="false" prefHeight="700.0" prefWidth="717.0" text="Scores Entry" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox fillWidth="false" layoutX="-1.0" layoutY="-6.0" prefHeight="700.0" prefWidth="717.0">
+                     <children>
+                        <GridPane onMouseEntered="#eotEvent" onMouseMoved="#eotMove" prefHeight="300.0" prefWidth="717.0">
+                           <children>
+                              <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="82.0" prefWidth="298.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <items>
+                                    <Button id="dark-blue" fx:id="eotSingleClassBtn" defaultButton="true" mnemonicParsing="false" onAction="#eotSingleClassResultProcessing" prefHeight="52.0" prefWidth="135.0" stylesheets="@application.css" text="EOT - Per Class (Termly)" textAlignment="CENTER" textFill="DARKBLUE" underline="true" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button id="dark-blue" fx:id="eotClassListBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#eotResultProcessingEOY" prefHeight="52.0" prefWidth="135.0" stylesheets="@application.css" text="EOY - Per Class (Annually)" textAlignment="CENTER" textFill="DARKBLUE" underline="true" wrapText="true">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </items>
+                              </ToolBar>
+                              <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Select a &#10;Class" textAlignment="RIGHT" textFill="#166582" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <items>
+                                    <Button id="dark-blue" fx:id="returnEOTBtn" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction76" prefHeight="52.0" prefWidth="71.0" stylesheets="@application.css" text="Return" textFill="#080757">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                 </items>
+                              </ToolBar>
+                              <TextField id="ladi" fx:id="eotDisplay" editable="false" prefHeight="46.0" prefWidth="138.0" promptText="transaction information" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Display" textAlignment="RIGHT" textFill="#166582" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="95.0" text="Date" textFill="#166582">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker id="ladi" fx:id="eotDate" prefHeight="48.0" prefWidth="152.0" promptText="Date" stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="95.0" text="Total No of Std" textAlignment="RIGHT" textFill="#166582">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="ladi" fx:id="eotNoStds" editable="false" prefHeight="48.0" prefWidth="152.0" promptText="total std processed" stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ComboBox id="ladi" fx:id="eotYear" prefHeight="48.0" prefWidth="150.0" promptText="session" stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <ComboBox id="ladi" fx:id="eotTerm" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="150.0" promptText="term" stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="97.0" layoutY="85.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="95.0" text="Class" textAlignment="RIGHT" textFill="#166582">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox id="ladi" fx:id="eotClass" prefHeight="48.0" prefWidth="152.0" promptText="class" stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                              <Label alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="95.0" text="Year/Term" textAlignment="RIGHT" textFill="#166582" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ComboBox id="ladi" fx:id="eotClassId" onMouseEntered="#eotComboInit" prefHeight="48.0" prefWidth="220.0" promptText="select a class to run eot " stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <Button id="dark-blue" fx:id="eotAddClassBtn" cancelButton="true" mnemonicParsing="false" onAction="#eotAddClassButton" prefHeight="40.0" prefWidth="90.0" stylesheets="@application.css" text="Add to List" textFill="#080757">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="337.0" text="End of Term Result Processing" textFill="#166582" underline="true" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="87.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="332.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="298.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <TableView fx:id="eotResultsProcessingDataTable" prefHeight="338.0" prefWidth="717.0">
+                           <columns>
+                              <TableColumn fx:id="eotSNoCol" prefWidth="49.0" text="S/No" />
+                              <TableColumn fx:id="eotStdClassCol" prefWidth="149.0" text="Class" />
+                              <TableColumn fx:id="eotSessionCol" prefWidth="144.0" text="Session" />
+                              <TableColumn fx:id="eotTermCol" prefWidth="122.0" text="Term" />
+                              <TableColumn fx:id="eotStatusCol" prefWidth="242.0" text="Status" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </center>
+</BorderPane>

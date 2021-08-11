@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vboxPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="950.0" style="-fx-background-color: red;" text="KUSAKI COLLEGE YANDEV" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="21.0" prefWidth="950.0" style="-fx-background-color: black;" text="Barcode Scanned List" textFill="WHITE">
+         <font>
+            <Font name="Sitka Banner Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="bslList" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="115.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <ComboBox fx:id="bslTableCombo" layoutX="228.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#bsl_Init" prefHeight="42.0" prefWidth="125.0" promptText="Where?" style="-fx-background-color: lightblue;">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="bslStdClass" layoutX="258.0" layoutY="12.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#bsl_Init2" prefHeight="42.0" prefWidth="125.0" promptText="Class" style="-fx-background-color: lightblue;">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="bslStatus" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#bsl_Init" prefHeight="42.0" prefWidth="125.0" promptText="Scanned Status" style="-fx-background-color: lightblue;">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></ComboBox>
+            <Label prefHeight="42.0" prefWidth="60.0" text="Fro Date">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+            <DatePicker fx:id="bslFroDate" editable="false" prefHeight="42.0" prefWidth="106.0" promptText="fro date">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></DatePicker>
+            <Label layoutX="480.0" layoutY="10.0" prefHeight="42.0" prefWidth="57.0" text="To Date">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+            <DatePicker fx:id="bslToDate" editable="false" prefHeight="42.0" prefWidth="106.0" promptText="to date">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin></DatePicker>
+            <Button fx:id="bslSpoolBtn" mnemonicParsing="false" onAction="#bslSpoolButton" prefHeight="46.0" prefWidth="88.0" style="-fx-background-color: lightblue;" text="Spool" textFill="#21510c">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="barcodeScannedListDataTable" prefHeight="541.0" prefWidth="890.0">
+         <columns>
+            <TableColumn fx:id="bslSNoCol" prefWidth="48.0" text="S/No" />
+            <TableColumn fx:id="bslDateCol" minWidth="0.0" prefWidth="90.0" text="Date" />
+            <TableColumn fx:id="bslIdCol" prefWidth="95.0" text="Std ID" />
+            <TableColumn fx:id="bslNameCol" prefWidth="200.0" text="Std Name" />
+            <TableColumn fx:id="bslClassCol" prefWidth="97.0" text="Class" />
+            <TableColumn fx:id="bslTimeCol" prefWidth="78.0" text="Time" />
+            <TableColumn fx:id="bslStatusCol" prefWidth="121.0" text="Status" />
+            <TableColumn fx:id="bslReasonCol" prefWidth="209.0" text="Reason" />
+         </columns>
+      </TableView>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="890.0">
+         <children>
+            <ToolBar prefHeight="36.0" prefWidth="319.0">
+              <items>
+                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="PRINT" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#bslXcelButton" prefHeight="25.0" prefWidth="90.0" text="EXCEL" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="returnEnterBarcodeScannedList" layoutX="104.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleButtonAction69" prefHeight="25.0" prefWidth="90.0" text="RETURN" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" />
+   </padding>
+</VBox>

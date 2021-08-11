@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: aliceblue;" text="Student List" textAlignment="CENTER" textFill="#654f37" wrapText="true">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: grey;" text="Users List" textAlignment="CENTER" textFill="#eebd89" wrapText="true" GridPane.columnIndex="2">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: grey;" text="Result By Subject" textAlignment="CENTER" textFill="#eebd89" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: grey;" text="Student Testimonials" textAlignment="CENTER" textFill="#eebd89" wrapText="true" GridPane.rowIndex="1">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: aliceblue;" text="Security Daily Clearance List" textAlignment="CENTER" textFill="#654f37" wrapText="true" GridPane.columnIndex="3">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: aliceblue;" text="Debtors List" textAlignment="CENTER" textFill="#654f37" wrapText="true" GridPane.columnIndex="4">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: grey;" text="Invoice" textAlignment="CENTER" textFill="#eebd89" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="genEnterTHBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonAction43" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: grey;" text="Statements of Account" textAlignment="CENTER" textFill="#eebd89" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: aliceblue;" text="Bills Report" textAlignment="CENTER" textFill="#654f37" wrapText="true" GridPane.rowIndex="2">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: aliceblue;" text="Others" textAlignment="CENTER" textFill="#654f37" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: grey;" text="Daily Scores Entry Report" textAlignment="CENTER" textFill="#eebd89" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="returnGenReportBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonAction73" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: lightblue;" text="RETURN" textAlignment="CENTER" textFill="#654f37" wrapText="true" GridPane.rowIndex="3">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: grey;" text="Result By Class" textAlignment="CENTER" textFill="#eebd89" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: aliceblue;" text="Daily Accounts Open Report" textAlignment="CENTER" textFill="#654f37" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: aliceblue;" text="Staff List" textAlignment="CENTER" textFill="#654f37" wrapText="true" GridPane.columnIndex="1">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: aliceblue;" text="Others" textAlignment="CENTER" textFill="#654f37" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: grey;" text="Others" textAlignment="CENTER" textFill="#eebd89" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <children>
+            <ComboBox prefHeight="49.0" prefWidth="150.0" promptText="select report JRXML" style="-fx-background-color: lightgreen;">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ComboBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="93.0" prefWidth="150.0" style="-fx-background-color: lightgreen;" text="Jasper Report Wizard" textAlignment="CENTER" textFill="#654f37" wrapText="true">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="1.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <children>
+            <ComboBox editable="true" prefHeight="34.0" prefWidth="150.0" promptText="Card No" style="-fx-background-color: lightgreen;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox prefHeight="34.0" prefWidth="150.0" promptText="select report JRXML" style="-fx-background-color: lightgreen;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="66.0" prefWidth="150.0" style="-fx-background-color: lightgreen;" text="Parametized Jasper Report" textAlignment="CENTER" textFill="#654f37" wrapText="true">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="1.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <children>
+            <ComboBox editable="true" prefHeight="20.0" prefWidth="150.0" promptText="Card No" style="-fx-background-color: lightgreen;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <DatePicker editable="false" prefHeight="15.0" prefWidth="150.0" promptText="start Date" style="-fx-background-color: lightgreen;">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </VBox.margin>
+            </DatePicker>
+            <DatePicker editable="false" prefHeight="15.0" prefWidth="150.0" promptText="end Date" style="-fx-background-color: lightgreen;">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </VBox.margin>
+            </DatePicker>
+            <ComboBox prefHeight="32.0" prefWidth="150.0" promptText="select report JRXML" style="-fx-background-color: lightgreen;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="15.0" prefWidth="150.0" style="-fx-background-color: lightgreen;" text="RepWiz" textAlignment="CENTER" textFill="#654f37" wrapText="true">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="1.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

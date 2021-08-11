@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <left>
+      <VBox prefHeight="461.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="473.0" text="Change Boarder Status" textFill="#166582">
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Button id="windows7-default" fx:id="enterDrugsInfoBtn" mnemonicParsing="false" onAction="#handleButtonAction37" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Create Billable Items">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterCreateClass" mnemonicParsing="false" onAction="#handleButtonAction49" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Create Classes">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterAssignBillToClassBtn" mnemonicParsing="false" onAction="#handleButtonAction52" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Assign Bills to Classes">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterBACBtn" mnemonicParsing="false" onAction="#handleButtonAction53" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Bill &amp; Graduate Classes">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterStdClassListBtn" mnemonicParsing="false" onAction="#handleButtonAction54" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Std Class List">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterMoveClass2ClassBtn" mnemonicParsing="false" onAction="#handleButtonAction55" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Move Class 2 Class">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterChangeBorderStatusBtn" mnemonicParsing="false" onAction="#handleButtonAction50" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Change Boarder Status">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterInventoryBtn" mnemonicParsing="false" onAction="#handleButtonAction35" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Create Invetory Item">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="invListBtn" mnemonicParsing="false" onAction="#handleButtonAction36" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="List Inventory Items">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterChangeStdClassBtn" mnemonicParsing="false" onAction="#handleButtonAction51" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="*Assign Std 2 Class">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterEOTBtn" mnemonicParsing="false" onAction="#handleButtonAction76" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="EOT - Result Processing">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterGenReportBtn" mnemonicParsing="false" onAction="#handleButtonAction73" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Reports">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="deleteStudentButton" mnemonicParsing="false" onAction="#handleButtonAction3" onMousePressed="#defineAdminInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Delete Records">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="39.0" prefWidth="725.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutY="11.0" prefHeight="17.0" prefWidth="3000.0" text="© 2019 Webstartrek Ltd" textFill="#166582">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="481.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane blendMode="MULTIPLY" cacheHint="QUALITY" depthTest="ENABLE" hgap="5.0" onMouseMoved="#cbsInfoInitX" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: aliceblue;" vgap="5.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="0.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label id="idLbl2" style="-fx-font-size: 14;" textAlignment="CENTER" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="100.0" text="CBID" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label id="IDLbl2" contentDisplay="RIGHT" text="Class" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField id="ladi" fx:id="cbsId" editable="false" prefHeight="35.0" prefWidth="300.0" promptText="change border identifier" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label id="dateLbl" contentDisplay="RIGHT" text="Date of Entry" textAlignment="RIGHT" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <DatePicker id="ladi" fx:id="cbsEntryDate" editable="false" prefHeight="35.0" prefWidth="150.0" promptText="Select your date of entry" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </DatePicker>
+                  <Label id="IDLbl2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Enter New Border Status" textAlignment="RIGHT" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox id="ladi" fx:id="cbsStdClass" onMouseEntered="#createClassesComboInit" prefHeight="35.0" prefWidth="300.0" promptText="std class" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <ComboBox id="ladi" fx:id="cbsNewBorderStatus" onMouseEntered="#cbsComboInit" prefHeight="35.0" prefWidth="300.0" promptText="select new border status" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Label id="IDLbl2" contentDisplay="RIGHT" layoutX="87.0" layoutY="24.0" text="Year/Term" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="16.0" layoutY="292.0" prefHeight="16.0" prefWidth="100.0" text="Student ID" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField id="ladi" fx:id="cbsStdId" layoutX="126.0" layoutY="284.0" prefHeight="35.0" prefWidth="300.0" promptText="std id" stylesheets="@application.css" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="16.0" layoutY="292.0" prefHeight="16.0" prefWidth="100.0" text="Name" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextArea id="ladi" fx:id="cbsName" editable="false" prefHeight="200.0" prefWidth="300.0" promptText="name" stylesheets="@application.css" wrapText="true" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <ComboBox id="ladi" fx:id="cbsYear" onMouseEntered="#cbsComboInit" prefHeight="35.0" prefWidth="200.0" promptText="session" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox id="ladi" fx:id="cbsTerm" onMouseEntered="#cbsComboInit" prefHeight="35.0" prefWidth="200.0" promptText="term" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <Label id="IDLbl2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="424.0" layoutY="162.0" text="Current Border Status" textAlignment="RIGHT" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox id="ladi" fx:id="cbsCurrentBorderStatus" layoutX="496.0" layoutY="152.0" onMouseEntered="#createClassesComboInit" prefHeight="35.0" prefWidth="300.0" promptText="current border status" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </GridPane>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="180.0" prefWidth="624.0" style="-fx-background-color: aliceblue;">
+               <children>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="44.0" prefWidth="1200.0">
+                     <items>
+                        <Button id="dark-blue" defaultButton="true" mnemonicParsing="false" onAction="#submitCbsButton" prefHeight="34.0" prefWidth="70.0" stylesheets="@application.css" text="Submit" textFill="#130875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="dark-blue" mnemonicParsing="false" onAction="#updateChangeBorderStatusButton" prefHeight="34.0" prefWidth="71.0" stylesheets="@application.css" text="Update" textFill="#130875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="dark-blue" mnemonicParsing="false" onAction="#findChangeBorderStatusButton" prefHeight="34.0" prefWidth="60.0" stylesheets="@application.css" text="Find" textFill="#130875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="dark-blue" mnemonicParsing="false" onAction="#deleteChangeBorderStatusButton" prefHeight="34.0" prefWidth="65.0" stylesheets="@application.css" text="Delete" textFill="#130875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="dark-blue" fx:id="returnEnterChangeBorderStatusBtn" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction50" prefHeight="32.0" prefWidth="66.0" stylesheets="@application.css" text="Return" textFill="#240c4a">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </items>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children></VBox>
+   </center>
+   <top>
+      <VBox prefHeight="46.0" prefWidth="725.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="40.0" prefWidth="725.0">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@webstartreklogo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="44.0" prefWidth="3000.0" style="-fx-background-color: #166582;">
+                    <items>
+                      <Button id="windows7-default" fx:id="logOffHomeButton" mnemonicParsing="false" onAction="#quitPlatformButton" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Log Out" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="About" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Help" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@help.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="windows7-default" fx:id="returnEnterInventoryPad" layoutX="126.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleButtonAction34" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Home" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                    </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="borderpane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <padding>
+      <Insets top="5.0" />
+   </padding>
+   <center>
+      <TabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab closable="false" text="Create, Find and Update Staff">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <GridPane blendMode="MULTIPLY" cacheHint="QUALITY" depthTest="ENABLE" hgap="5.0" onMouseMoved="#defineAccessLevel3" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: aliceblue;" vgap="5.0">
+                           <children>
+                              <Label id="idLbl2" style="-fx-font-size: 14;" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <TextField id="ladi" fx:id="staffEmpNo" prefHeight="50.0" prefWidth="324.0" promptText="Enter your unique student ID" stylesheets="@application.css" GridPane.columnIndex="1">
+                                 <cursor>
+                                    <Cursor fx:constant="H_RESIZE" />
+                                 </cursor>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="16.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="SurName" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="DOB/Sex" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label id="IDLbl2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Emp No" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Other Names" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Nationality" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Place of Birth" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="106.0" text="State/LGA of Origin" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="ladi" fx:id="surNameStaff" promptText="SurName" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField id="ladi" fx:id="otherNamesStaff" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField id="ladi" fx:id="placeOfBirthStaff" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label id="addressLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Address" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextArea id="ladi" fx:id="addressStaff" prefHeight="200.0" prefWidth="200.0" promptText="Present Residential Address" stylesheets="@application.css" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </TextArea>
+                              <Label id="previousSchoolLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Email" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label id="lastClassLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Phone" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="ladi" fx:id="emailStaff" prefHeight="44.0" prefWidth="280.0" promptText="Parent/Guardian Email Address" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField id="ladi" fx:id="nextOfKinStaff" promptText="Someone to contact in case of emergency" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label id="disabilityLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Disabled?" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label id="ifDisabledLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="If Disabled (Give details)" textAlignment="RIGHT" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label id="ICELbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="99.0" text="Next of Kin" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label id="dateLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="100.0" text="Employment Date" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker id="ladi" fx:id="staffDOR" prefHeight="39.0" prefWidth="148.0" promptText="date of employment" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                                 </GridPane.margin>
+                              </DatePicker>
+                              <TextArea id="ladi" fx:id="ifDisabledStaff" prefHeight="200.0" prefWidth="200.0" promptText="Give details of disability to allow for proper provision of care or special needs" stylesheets="@application.css" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </TextArea>
+                              <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                                 <items>
+                                    <Button id="dark-blue" defaultButton="true" mnemonicParsing="false" onAction="#findStaff" prefHeight="34.0" prefWidth="66.0" stylesheets="@application.css" text="Find" textFill="#130875">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button id="dark-blue" fx:id="updateStaffBtn" mnemonicParsing="false" onAction="#updateStaffButton" prefHeight="34.0" prefWidth="74.0" stylesheets="@application.css" text="Update" textFill="#130875">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button id="dark-blue" fx:id="saveStaffBtn" mnemonicParsing="false" onAction="#saveStaffButton" prefHeight="34.0" prefWidth="80.0" stylesheets="@application.css" text="Save" textFill="#130875">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </items>
+                              </ToolBar>
+                              <ComboBox id="ladi" fx:id="disabilityStaff" onMouseEntered="#initializeStaffCombo" prefHeight="33.0" prefWidth="135.0" promptText="select option" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                 <children>
+                                    <TextField id="ladi" fx:id="phone1Staff" promptText="Mobile No 1" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="Times New Roman" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField id="ladi" fx:id="phone2Staff" promptText="Mobile No 2" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="Times New Roman" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="106.0" text="Marital Status" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox id="ladi" fx:id="maritalStatusStaff" onMouseEntered="#initializeStaffCombo" prefHeight="37.0" prefWidth="159.0" promptText="marital state" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="103.0" text="Form Master of" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="274.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <children>
+                                    <TextField id="ladi" fx:id="staffSpecialization" promptText="Area of Specialty" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="Times New Roman" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField id="ladi" fx:id="staffQualification" promptText="Qualification" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="Times New Roman" size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <Label id="previousSchoolLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="107.0" text="Specialization" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label id="previousSchoolLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="107.0" text="Date of Graduation" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <children>
+                                    <DatePicker id="ladi" fx:id="staffDOQ" prefHeight="41.0" prefWidth="117.0" promptText="Date Qualification was obtained" stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                    <Label id="lastClassLbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="40.0" text="Desig" textFill="#120346" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox id="ladi" fx:id="designationStaff" onMouseEntered="#initializeStaffCombo" prefHeight="37.0" prefWidth="123.0" promptText="Designation" stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <DatePicker id="ladi" fx:id="staffDOB" prefHeight="41.0" prefWidth="125.0" promptText="Select your Date of Birth" stylesheets="@application.css" />
+                                    <ComboBox id="ladi" fx:id="staffSex" onMouseEntered="#initializeStaffCombo" prefHeight="41.0" prefWidth="125.0" promptText="sex" stylesheets="@application.css" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <children>
+                                    <ComboBox id="ladi" fx:id="stateStaff" onMouseEntered="#staffInitState" prefHeight="37.0" prefWidth="100.0" promptText="state" stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <ComboBox id="ladi" fx:id="lgaStaff" layoutX="10.0" layoutY="10.0" onMouseEntered="#staffInitLGA" prefHeight="37.0" prefWidth="100.0" promptText="LGA" stylesheets="@application.css">
+                                       <HBox.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <TextField id="ladi" fx:id="villageStaff" prefHeight="30.0" prefWidth="100.0" promptText="Village" stylesheets="@application.css">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <Label id="ICELbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="47.0" layoutY="542.0" prefHeight="16.0" prefWidth="99.0" text="Add Subjects" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                 <children>
+                                    <ComboBox id="ladi" fx:id="teacherSubjectsCombo" editable="true" onMouseEntered="#initializeStaffCombo2" prefHeight="32.0" prefWidth="186.0" promptText="select subjects" stylesheets="@application.css" />
+                                    <Button id="dark-blue" mnemonicParsing="false" onAction="#addSubjectToStaffButton" prefHeight="32.0" prefWidth="60.0" stylesheets="@application.css" text="Add" textFill="#240c4a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="8.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <Button id="dark-blue" mnemonicParsing="false" onAction="#removeSubjectFromStaffButton" prefHeight="42.0" prefWidth="71.0" stylesheets="@application.css" text="Remove&#10;Subject" textFill="#240c4a" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                              </Button>
+                              <ComboBox id="ladi" fx:id="formMasterOf1" editable="true" onMouseEntered="#initializeStaffComboZ" prefHeight="37.0" prefWidth="216.0" promptText="class" stylesheets="@application.css" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                              <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                 <items>
+                                    <Button id="dark-blue" mnemonicParsing="false" onAction="#deleteStaff" prefHeight="34.0" prefWidth="62.0" stylesheets="@application.css" text="Delete" textFill="#130875">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button id="dark-blue" mnemonicParsing="false" onAction="#fetchSubjectsButton" prefHeight="34.0" prefWidth="118.0" stylesheets="@application.css" text="Fetch Subjects" textFill="#240c4a">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </items>
+                              </ToolBar>
+                              <Button id="dark-blue" fx:id="returnStaffInfoButton" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction14" prefHeight="34.0" prefWidth="66.0" stylesheets="@application.css" text="Return" textFill="#240c4a" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ComboBox id="ladi" fx:id="nationalityStaff" layoutX="483.0" layoutY="168.0" onMouseEntered="#staffInitCountry" prefHeight="37.0" prefWidth="159.0" promptText="nationality" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="0.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="10.0" prefWidth="244.0" />
+                           </columnConstraints>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </GridPane>
+                        <TableView fx:id="assignedSubjectsDataTable" prefHeight="700.0" prefWidth="244.0">
+                          <columns>
+                            <TableColumn fx:id="assSubjCodeCol" prefWidth="60.0" text="Subject &#10;Code" />
+                            <TableColumn fx:id="assSubjNameCol" prefWidth="182.0" text="Subjects" />
+                          </columns>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="1.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <VBox prefHeight="51.0" prefWidth="1044.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar prefHeight="13.0" prefWidth="1044.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <HBox prefHeight="40.0" prefWidth="725.0">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@webstartreklogo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="44.0" prefWidth="3000.0" style="-fx-background-color: #166582;">
+                     <items>
+                        <Button id="windows7-default" fx:id="logOffHomeButton1" mnemonicParsing="false" onAction="#quitPlatformButton" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Log Out" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="About" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Help" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@help.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="windows7-default" fx:id="returnStaffInfoButton" layoutX="126.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleButtonAction14" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Home" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="2.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefHeight="461.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="windows7-default" fx:id="enterstdInfoBtn" mnemonicParsing="false" onAction="#handleButtonAction93" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Students Information">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="staffInfoButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction14" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Staff Information">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterFinInfoBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction94" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Financial Management">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" layoutX="10.0" layoutY="45.0" mnemonicParsing="false" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Library Management">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterScoreInfoBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction95" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Score Cards">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterAcademicYrBtn" mnemonicParsing="false" onAction="#handleButtonAction82" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Calendar Management">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterAttendanceBtn" mnemonicParsing="false" onAction="#handleButtonAction98" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Attendance Mgt">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterHostelBtn" mnemonicParsing="false" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Hostel Management">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="librarySysBtn" mnemonicParsing="false" onAction="#handleButtonAction23" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Library Management">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="generateReportsButton" mnemonicParsing="false" onAction="#handleButtonAction15" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Statutory Reports">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterInventoryPad" layoutX="15.0" layoutY="192.0" mnemonicParsing="false" onAction="#handleButtonAction34" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Administration">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterSecurityBtn" layoutX="10.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleButtonAction100" onMousePressed="#defineHomeAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Security">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="39.0" prefWidth="725.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutY="11.0" prefHeight="17.0" prefWidth="3000.0" text="© 2019 Webstartrek Ltd" textFill="#166582">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

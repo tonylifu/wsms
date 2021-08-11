@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="920.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Periodic Earned &amp; NE Income Table">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane fx:id="printPaneEarnedIncome2" dividerPositions="0.28" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="920.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="898.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="110.0" fitWidth="108.0" layoutX="49.0" layoutY="9.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@kusaki.jpg" />
+                                 </image>
+                              </ImageView>
+                              <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="167.0" prefHeight="19.0" prefWidth="879.0">
+                                 <children>
+                                    <Label prefHeight="19.0" prefWidth="125.0" text="Total Net Income:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="ladi" fx:id="totalNetIncome2" prefHeight="25.0" prefWidth="164.0" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="19.0" prefWidth="150.0" text="Net Outstanding Cash:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="ladi" fx:id="incomeCashOutStanding2" prefHeight="25.0" prefWidth="138.0" promptText="cash receipt - only numbers" stylesheets="@application.css" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label prefHeight="26.0" prefWidth="91.0" text="Cash Receipt:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="ladi" fx:id="incomeCashReceipt2" prefHeight="25.0" prefWidth="138.0" promptText="cash receipt - only numbers" stylesheets="@application.css" text="0">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <Button id="dark-blue" fx:id="spoolIncomeBtn2" layoutX="813.0" layoutY="134.0" mnemonicParsing="false" onAction="#spoolIncomeButton2" prefHeight="25.0" prefWidth="66.0" stylesheets="@application.css" text="Spool" textFill="#110a2f">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="incomeTextError2" editable="false" layoutX="9.0" layoutY="134.0" prefHeight="25.0" prefWidth="398.0" style="-fx-background-color: aliceblue;" visible="false" />
+                              <DatePicker id="ladi" fx:id="periodicFroDate" editable="false" layoutX="558.0" layoutY="133.0" prefHeight="25.0" prefWidth="119.0" promptText="fro date" stylesheets="@application.css" />
+                              <DatePicker id="ladi" fx:id="periodicToDate" editable="false" layoutX="686.0" layoutY="132.0" prefHeight="25.0" prefWidth="119.0" promptText="to date" stylesheets="@application.css" />
+                              <Label alignment="CENTER" layoutX="166.0" layoutY="64.0" prefHeight="59.0" prefWidth="713.0" style="-fx-background-color: gray;" text="DESCIPLINE AND DEVOTION&#10;P. O. Box 135, Gboko, Benue" textFill="WHITE">
+                                 <font>
+                                    <Font name="Pristina" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="166.0" layoutY="14.0" prefHeight="46.0" prefWidth="713.0" style="-fx-background-color: RED;" text="K U S A K I   C O L L E G E   Y A N D E V" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="incomeDataTable2" layoutX="12.0" layoutY="14.0" prefHeight="400.0" prefWidth="879.0">
+                                 <columns>
+                                    <TableColumn fx:id="periodicSNoCol" prefWidth="35.0" text="S/No" />
+                                    <TableColumn fx:id="periodicAcctNoCol" prefWidth="137.0" text="Account No" />
+                                    <TableColumn fx:id="periodicAcctNameCol" minWidth="1.0" prefWidth="394.0" text="Account Name" />
+                                    <TableColumn fx:id="periodicCategoryCol" prefWidth="192.0" text="Category" />
+                                    <TableColumn fx:id="periodicBalanceCol" prefWidth="120.0" text="Balance" />
+                                 </columns>
+                              </TableView>
+                              <Button id="dark-blue" fx:id="returnEnterIncomeBtn2" layoutX="636.0" layoutY="422.0" mnemonicParsing="false" onAction="#handleButtonAction46" prefHeight="32.0" prefWidth="81.0" stylesheets="@application.css" text="Cancel" textFill="#130f3c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </Button>
+                              <Button id="dark-blue" fx:id="genExcelIncomeBtn2" layoutX="720.0" layoutY="421.0" mnemonicParsing="false" onAction="#genExcelIncomeButton2" prefHeight="32.0" prefWidth="94.0" stylesheets="@application.css" text="GenExcel" textFill="#130f3c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </Button>
+                              <Button id="dark-blue" fx:id="printIncomeBtn2" layoutX="817.0" layoutY="421.0" mnemonicParsing="false" onAction="#printIncomeButton2" prefHeight="32.0" prefWidth="65.0" stylesheets="@application.css" text="Print" textFill="#130f3c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Daily Cumulative Earned &amp; NE Income Table">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane fx:id="printPaneEarnedIncome" dividerPositions="0.28" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="920.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="898.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="91.0" layoutX="49.0" layoutY="9.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@kusaki.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="165.0" layoutY="3.0" prefHeight="39.0" prefWidth="713.0" style="-fx-background-color: RED;" text="K U S A K I   C O L L E G E   Y A N D E V" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="165.0" layoutY="43.0" prefHeight="58.0" prefWidth="713.0" style="-fx-background-color: gray;" text="DESCIPLINE AND DEVOTION&#10;P. O. Box 135, Gboko, Benue" textFill="WHITE">
+                                 <font>
+                                    <Font name="Pristina" size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="14.0" layoutY="167.0" prefHeight="19.0" prefWidth="879.0">
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="80.0" text="Total Income:" />
+                                    <Label id="ladi" fx:id="totalNetIncome" prefHeight="25.0" prefWidth="110.0" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="25.0" prefWidth="70.0" text="Till Balance:" />
+                                    <Label id="ladi" fx:id="incomeTillBalance" prefHeight="25.0" prefWidth="100.0" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="19.0" prefWidth="103.0" text="Net Std's Balance:" />
+                                    <Label id="ladi" fx:id="totalNetPatBalances" prefHeight="25.0" prefWidth="100.0" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="19.0" prefWidth="87.0" text="Net Till Balance:" />
+                                    <Label id="ladi" fx:id="incomeNetBalance" prefHeight="25.0" prefWidth="100.0" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="19.0" prefWidth="39.0" text="Date:" />
+                                    <Label id="ladi" fx:id="incomeDate" prefHeight="25.0" prefWidth="100.0" stylesheets="@application.css">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button id="dark-blue" fx:id="spoolIncomeBtn" layoutX="800.0" layoutY="127.0" mnemonicParsing="false" onAction="#spoolIncomeButton" prefHeight="32.0" prefWidth="78.0" stylesheets="@application.css" text="Balance" textFill="#110a2f">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="incomeTextError" editable="false" layoutX="9.0" layoutY="134.0" prefHeight="25.0" prefWidth="211.0" style="-fx-background-color: aliceblue;" visible="false" />
+                              <TextField id="ladi" fx:id="incomeCashReceipt" layoutX="608.0" layoutY="129.0" prefHeight="25.0" promptText="cash receipt - only numbers" stylesheets="@application.css" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="521.0" layoutY="135.0" prefHeight="17.0" prefWidth="91.0" text="Cash Receipt:">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="ladi" fx:id="incomeCashOutStanding" editable="false" layoutX="326.0" layoutY="129.0" prefHeight="25.0" promptText="cash receipt - only numbers" stylesheets="@application.css" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="181.0" layoutY="134.0" prefHeight="19.0" prefWidth="150.0" text="Net Outstanding Cash:">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="annualCadre_LBL" alignment="CENTER" layoutX="46.0" layoutY="102.0" prefHeight="21.0" prefWidth="832.0" style="-fx-background-color: black;" text="                   Daily Cash Balancing" textFill="WHITE">
+                                 <font>
+                                    <Font name="Sitka Banner Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="incomeDataTable" layoutX="12.0" layoutY="14.0" prefHeight="400.0" prefWidth="879.0">
+                                 <columns>
+                                    <TableColumn fx:id="incomeSNoCol" prefWidth="56.0" text="S/N" />
+                                    <TableColumn fx:id="acctNumIncomeCol" prefWidth="201.0" text="Income Account Number" />
+                                    <TableColumn fx:id="acctNameIncomeCol" minWidth="1.0" prefWidth="217.0" text="Income Account Names" />
+                                    <TableColumn fx:id="cbIncomeCol" prefWidth="201.0" text="Balance" />
+                                    <TableColumn fx:id="earnedIncomeCol" prefWidth="183.0" text="Earned Income Amount" />
+                                 </columns>
+                              </TableView>
+                              <Button id="dark-blue" fx:id="returnEnterIncomeBtn" layoutX="640.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleButtonAction44" prefHeight="30.0" prefWidth="81.0" stylesheets="@application.css" text="Cancel" textFill="#130f3c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button id="dark-blue" fx:id="genExcelIncomeBtn" layoutX="726.0" layoutY="424.0" mnemonicParsing="false" onAction="#genExcelIncomeButton" prefHeight="30.0" prefWidth="94.0" stylesheets="@application.css" text="GenExcel" textFill="#130f3c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button id="dark-blue" fx:id="printIncomeBtn" layoutX="824.0" layoutY="424.0" mnemonicParsing="false" onAction="#printIncomeButton" prefHeight="30.0" prefWidth="65.0" stylesheets="@application.css" text="Print" textFill="#130f3c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

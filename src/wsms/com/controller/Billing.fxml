@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="printPaneBillInfo" dividerPositions="0.28" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="898.0">
+         <children>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="53.0" prefHeight="59.0" prefWidth="702.0" style="-fx-background-color: gray;" text="DESCIPLINE AND DEVOTION&#10;P. O. Box 135, Gboko, Benue" textFill="WHITE">
+               <font>
+                  <Font name="Pristina" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="110.0" fitWidth="108.0" layoutX="49.0" layoutY="9.0" pickOnBounds="true">
+               <image>
+                  <Image url="@kusaki.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="14.0" layoutY="138.0" prefHeight="0.0" prefWidth="820.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="39.0" text="Name:" />
+                  <Label fx:id="billInfoName" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="25.0" prefWidth="37.0" text="From:" />
+                  <Label fx:id="billInfoFromDate" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="25.0" prefWidth="23.0" text="To:" />
+                  <Label fx:id="billInfoToDate" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="25.0" prefWidth="60.0" text="Total Amt:" />
+                  <Label fx:id="billInfoTotalAmt" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="51.0" text=" CardNo:" />
+                  <TextField fx:id="billInfoCardNo" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: aliceblue;" />
+               </children>
+            </HBox>
+            <Button fx:id="spoolBillingsInfoBtn" defaultButton="true" layoutX="838.0" layoutY="136.0" mnemonicParsing="false" onAction="#spoolBillInfoButton" prefHeight="25.0" prefWidth="66.0" text="Spool" textFill="#110a2f">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <DatePicker fx:id="billInfoStartDate" layoutX="804.0" layoutY="81.0" prefWidth="100.0" promptText="From" />
+            <DatePicker fx:id="billInfoEndDate" layoutX="804.0" layoutY="108.0" prefWidth="100.0" promptText="To" />
+            <TextField fx:id="billInfoTextError" editable="false" layoutX="301.0" layoutY="134.0" prefHeight="25.0" prefWidth="500.0" style="-fx-background-color: aliceblue;" visible="false" />
+            <Label fx:id="billInfoCashPaid" layoutX="116.0" layoutY="168.0" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: lightgray;">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="56.0" layoutY="168.0" prefHeight="25.0" prefWidth="60.0" text="Cash Paid:" />
+            <Label layoutX="368.0" layoutY="168.0" prefHeight="25.0" prefWidth="126.0" text="Outstanding Payment:" />
+            <Label fx:id="billInfoOutstandingPmt" layoutX="494.0" layoutY="168.0" prefHeight="25.0" prefWidth="194.0" style="-fx-background-color: lightgray;">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" prefHeight="48.0" prefWidth="702.0" style="-fx-background-color: DARKRED;" text="K U S A K I   C O L L E G E   Y A N D E V" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="billingsInfoDataTable" layoutX="22.0" layoutY="14.0" prefHeight="460.0" prefWidth="859.0">
+              <columns>
+                <TableColumn fx:id="billInfoSNoCol" prefWidth="41.0" text="S/N" />
+                  <TableColumn fx:id="billInfoDateCol" prefWidth="95.0" text="Dates" />
+                  <TableColumn fx:id="billInfoConsultCol" prefWidth="97.0" text="School Fees" />
+                  <TableColumn fx:id="billInfoDrugsCol" prefWidth="87.0" text="WAEC/SSCE" />
+                  <TableColumn fx:id="billInfoSurgeryCol" minWidth="1.0" prefWidth="93.0" text="Junior WAEC" />
+                  <TableColumn fx:id="billInfoLabCol" prefWidth="87.0" text="NECO" />
+                  <TableColumn fx:id="billInfoXrayCol" prefWidth="79.0" text="ICT" />
+                  <TableColumn fx:id="billInfoBedCol" prefWidth="85.0" text="Boarding Fees" />
+                  <TableColumn fx:id="billInfoOthersCol" prefWidth="94.0" text="Others" />
+                  <TableColumn fx:id="billInfoTotalCol" prefWidth="100.0" text="Total" />
+              </columns>
+            </TableView>
+            <HBox layoutX="14.0" layoutY="480.0" prefHeight="30.0" prefWidth="872.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="49.0" text="Cashier: " />
+                  <Label prefHeight="30.0" prefWidth="219.0" />
+                  <Label prefHeight="29.0" prefWidth="118.0" text="Signature/Stamp:" />
+                  <Label prefHeight="30.0" prefWidth="230.0" />
+                  <Button fx:id="returnBillingsBtn" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction48" prefHeight="28.0" prefWidth="81.0" text="Cancel" textFill="#130f3c">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="genExcelBillInfoBtn" mnemonicParsing="false" onAction="#genExcelBillingInfoButton" prefHeight="30.0" prefWidth="94.0" text="GenExcel" textFill="#130f3c">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="printBillingsInfoBtn" mnemonicParsing="false" onAction="#printBillInfoButton" prefHeight="30.0" prefWidth="65.0" text="Print" textFill="#130f3c">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

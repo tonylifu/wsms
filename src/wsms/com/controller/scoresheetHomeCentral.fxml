@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <left>
+      <VBox prefHeight="461.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="473.0" text="Score Card Information" textFill="#166582">
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Button id="windows7-default" fx:id="enterScoreSheetsJssClass" mnemonicParsing="false" onAction="#handleButtonAction71" onMousePressed="#defineScoreCardInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Enter &amp; Update Scores">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterEOTResult" mnemonicParsing="false" onAction="#handleButtonAction96" onMousePressed="#defineScoreCardInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="End of Term Results">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterLiveResult" mnemonicParsing="false" onAction="#handleButtonAction97" onMousePressed="#defineScoreCardInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Live Results">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="addDeleteSubjectsButton" mnemonicParsing="false" onAction="#handleButtonAction5" onMousePressed="#defineScoreCardInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Add &amp; Update Subjects">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" mnemonicParsing="false" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" mnemonicParsing="false" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" mnemonicParsing="false" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" mnemonicParsing="false" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <TextFlow prefHeight="481.0" prefWidth="258.0" style="-fx-background-color: lightyellow;" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="39.0" prefWidth="725.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutY="11.0" prefHeight="17.0" prefWidth="3000.0" text="© 2019 Webstartrek Ltd" textFill="#166582">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="481.0" prefWidth="467.0" style="-fx-background-color: aliceblue;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="50.0" prefWidth="1000.0" text="My Dashboard" textAlignment="JUSTIFY" textFill="#166582">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="1000.0" text="Last Successful Login" textAlignment="JUSTIFY" textFill="#166582">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="60.0" prefHeight="50.0" prefWidth="1000.0" text="Last Failed Login" textAlignment="JUSTIFY" textFill="#166582">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <VBox VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </VBox>
+         </children></VBox>
+   </center>
+   <top>
+      <VBox prefHeight="46.0" prefWidth="725.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="40.0" prefWidth="725.0">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@webstartreklogo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="44.0" prefWidth="3000.0" style="-fx-background-color: #166582;">
+                    <items>
+                      <Button id="windows7-default" fx:id="logOffHomeButton" mnemonicParsing="false" onAction="#quitPlatformButton" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Log Out" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="About" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Help" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@help.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="windows7-default" fx:id="returnScoreInfoBtn" layoutX="126.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleButtonAction95" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Home" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                    </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+</BorderPane>

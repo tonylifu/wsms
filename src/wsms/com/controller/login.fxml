@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="293.0" prefWidth="365.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="360.0">
+               <children>
+                  <Label id="bevel-grey" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="74.0" stylesheets="@application.css" text=" Login ID">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField id="ladi" fx:id="userNameLogin_TF" stylesheets="@application.css">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="133.0" prefHeight="48.0" prefWidth="360.0">
+               <children>
+                  <Label id="bevel-grey" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="74.0" stylesheets="@application.css" text=" Password">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <PasswordField id="ladi" fx:id="passwordLogin_TF" stylesheets="@application.css">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button id="dark-blue" fx:id="loginBtn" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#loginButton" prefHeight="26.0" prefWidth="96.0" stylesheets="@application.css" text="LOGIN" />
+                  <Button id="dark-blue" fx:id="adminButton" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleButtonAction6" prefHeight="26.0" prefWidth="96.0" stylesheets="@application.css" text="ADMIN" />
+                  <Button id="dark-blue" alignment="CENTER" cancelButton="true" contentDisplay="CENTER" layoutX="110.0" layoutY="12.0" mnemonicParsing="false" onAction="#quitPlatformButton2" prefHeight="26.0" prefWidth="96.0" stylesheets="@application.css" text="EXIT" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="47.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" stylesheets="@application.css" text="© 2019 Webstartrek Ltd" />
+         </children>
+      </VBox>
+   </bottom>
+   <top>
+      <VBox alignment="CENTER" prefHeight="48.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@webstartreklogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label id="windows7" alignment="CENTER" prefHeight="56.0" prefWidth="105.0" stylesheets="@application.css" text="Webstartrek Ltd&#10;RC 1527974" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <left>
+      <ImageView fitHeight="137.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@sms4.jpg" />
+         </image>
+      </ImageView>
+   </left>
+   <right>
+      <ImageView fitHeight="137.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@aes.jpg" />
+         </image>
+      </ImageView>
+   </right>
+</BorderPane>

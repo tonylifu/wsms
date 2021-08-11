@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <TitledPane animated="false" prefHeight="650.0" prefWidth="800.0" text="Scores Entry" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane gridLinesVisible="true" onMouseMoved="#verifyStdSubject" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: lightgray;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="87.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="443.0" minWidth="10.0" prefWidth="372.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="358.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#verifyIdButton" prefHeight="0.0" prefWidth="79.0" text="Verify ID" textFill="#090468" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <TextField fx:id="stdId_TF" onMouseExited="#verifyStdId" prefHeight="48.0" prefWidth="332.0" promptText="Enter Student ID and verify record" style="-fx-background-color: #d8fbdd;" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Names" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="81.0" text="SSS " textFill="#141306">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children></HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Label fx:id="CA1_LBL" alignment="CENTER_RIGHT" prefHeight="132.0" prefWidth="30.0" text="CA1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CA1_TF" onMouseEntered="#initialize4" onMouseExited="#initialize5" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="80.0" promptText="CA1" style="-fx-background-color: #d8fbdd;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="CA2_LBL" alignment="CENTER_RIGHT" prefHeight="132.0" prefWidth="30.0" text="CA2">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CA2_TF" onMouseEntered="#initialize4" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="80.0" promptText="CA2" style="-fx-background-color: #d8fbdd;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="CA3_LBL" alignment="CENTER_RIGHT" prefHeight="132.0" prefWidth="30.0" text="CA3">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CA3_TF" onMouseEntered="#initialize4" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="80.0" promptText="CA3" style="-fx-background-color: #d8fbdd;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        
+                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <Label fx:id="ASS1_LBL" alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="41.0" text="ASS1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ASS1_TF" onMouseEntered="#initialize4" onMouseExited="#initialize5" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="70.0" promptText="Assessment" style="-fx-background-color: #d8fbdd;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="ASS2_LBL" alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="46.0" text="ASS2">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PRJ1_TF" onMouseEntered="#initialize4" onMouseExited="#initialize5" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="70.0" promptText="Project" style="-fx-background-color: #d8fbdd;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="ASS3_LBL" alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="60.0" text="ASS3">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ASS2_TF" onMouseEntered="#initialize4" onMouseExited="#initialize5" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="70.0" promptText="Assessment" style="-fx-background-color: #d8fbdd;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <children>
+                              <Label fx:id="ASS4_LBL" alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="33.0" text="ASS4">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PRJ2_TF" onMouseEntered="#initialize4" onMouseExited="#initialize5" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="70.0" promptText="Project" style="-fx-background-color: #d8fbdd;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="ASS5_LBL" alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="40.0" text="ASS5">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ASS3_TF" onMouseEntered="#initialize4" onMouseExited="#initialize5" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="70.0" promptText="Assessment" style="-fx-background-color: #d8fbdd;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="ASS6_LBL" alignment="CENTER_RIGHT" prefHeight="132.0" prefWidth="40.0" text="ASS6">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="PRJ3_TF" onMouseEntered="#initialize4" onMouseExited="#initialize5" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="70.0" promptText="Project" style="-fx-background-color: #d8fbdd;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="328.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="132.0" prefWidth="40.0" text="Exam">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="examScore_TF" onMouseEntered="#initialize4" onMouseMoved="#initialize4" prefHeight="55.0" prefWidth="97.0" promptText="Exam Score" style="-fx-background-color: #d8fbdd;" text="0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="132.0" prefWidth="95.0" text="Total Score">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="total_TF" editable="false" focusTraversable="false" prefHeight="55.0" prefWidth="143.0" promptText="Total Score" style="-fx-background-color: lightblue;" text="0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="106.0" prefWidth="48.0" text="Grade" textFill="#5b1010">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="grade_TF" onMouseEntered="#initialize3" opacity="0.8" prefHeight="55.0" prefWidth="107.0" promptText="Grade" style="-fx-background-color: lightblue;">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                       
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="89.0" prefWidth="58.0" text="Subject">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="subjectName_TF" editable="true" onMouseEntered="#initialize3Subj" prefHeight="50.0" prefWidth="310.0" promptText="select option" style="-fx-background-color: lightgreen;">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #d8fbdd;" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#validateScoresButton" prefHeight="40.0" prefWidth="71.0" text="Validate" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Button>
+                              <Button fx:id="updateScoresBtn" disable="true" mnemonicParsing="false" onAction="#updateScoresButton" prefHeight="40.0" prefWidth="73.0" text="Update" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Button>
+                              <Button defaultButton="true" disable="true" mnemonicParsing="false" onAction="#saveScoresButton" prefHeight="42.0" prefWidth="71.0" text="Save" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Button>
+                           </items>
+                        </ToolBar>
+                        <Button mnemonicParsing="false" onAction="#verifySubjectButton" prefHeight="38.0" prefWidth="80.0" text="Verify Subject " textFill="#400606" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="9.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="ID">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: pink;" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <items>
+                              <Button fx:id="returnScoreSheetsButton" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction4" prefHeight="40.0" prefWidth="71.0" text="Return" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="deleteScoresBtn" disable="true" mnemonicParsing="false" onAction="#deleteScoresButton" prefHeight="40.0" prefWidth="71.0" text="Delete" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="85.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteIDSETs_Temp" prefHeight="40.0" prefWidth="71.0" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <TextField fx:id="sId_TF" prefHeight="46.0" prefWidth="138.0" promptText="for validating: &quot;ID&quot;+&quot;Class&quot;+&quot;Term&quot;+&quot;SubjectCode&quot;" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="SID" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <Button mnemonicParsing="false" onAction="#computeTotalButton" prefHeight="39.0" prefWidth="79.0" text="Compute" textFill="#161343" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="95.0" text="Subject Code">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="subjectCode_TF" editable="true" onMouseEntered="#initialize3" onMouseExited="#verifyStdSubject" onMouseMoved="#verifyStdSubject" prefHeight="55.0" prefWidth="120.0" promptText="select option" style="-fx-background-color: lightgreen;">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin></ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="38.0" text="Class">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="stdClass_TF" onMouseEntered="#initialize3" prefHeight="55.0" prefWidth="118.0" promptText="select option" style="-fx-background-color: lightblue;">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin></ComboBox>
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="54.0" text="Year">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="scoresYear_TF" onMouseEntered="#initialize3" prefHeight="55.0" prefWidth="147.0" promptText="select option" style="-fx-background-color: lightblue;">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="94.0" text="Term">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="term_TF" onMouseEntered="#initialize3" prefHeight="55.0" prefWidth="118.0" promptText="select option" style="-fx-background-color: lightblue;">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin></ComboBox>
+                           </children>
+                        </HBox>
+                        <ComboBox fx:id="name_TF" editable="true" onMouseEntered="#initialize3" prefHeight="55.0" prefWidth="373.0" promptText="select option" style="-fx-background-color: lightgreen;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="81.0" text="JSS " textFill="#141306" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                       
+                       
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </center>
+</BorderPane>

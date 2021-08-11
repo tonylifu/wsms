@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#jssEntryInit2" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="900.0" style="-fx-background-color: red;" text="K U S A K I  C O L L E G E  Y A N D E V" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="21.0" prefWidth="900.0" style="-fx-background-color: black;" text="SSS - CLASS SCORESHEET ENTRY FORM" textFill="WHITE">
+         <font>
+            <Font name="Sitka Banner Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="42.0" prefWidth="800.0">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#spoolSssScoresheetsButton" prefHeight="46.0" prefWidth="88.0" text="Spool">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#editSssScoresheetsButton" prefHeight="42.0" prefWidth="79.0" text="Edit">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <ComboBox fx:id="sssSubjCodeCombo" layoutX="113.0" layoutY="15.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#sssEntryInit2" prefHeight="42.0" prefWidth="100.0" promptText="subj code" style="-fx-background-color: aliceblue;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="sssSubjectCombo" layoutX="98.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#sssEntryInit2" prefHeight="32.0" prefWidth="182.0" promptText="select subject" style="-fx-background-color: aliceblue;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin></ComboBox>
+            <ComboBox fx:id="SSSClassCombo" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#sssEntryInit" prefHeight="32.0" prefWidth="155.0" promptText="select class" style="-fx-background-color: lightblue;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin></ComboBox>
+            <Label fx:id="SSSClassLabel" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="249.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <TableView fx:id="sssScoreSheetEntryDataTable" prefHeight="560.0" prefWidth="900.0">
+         <columns>
+            <TableColumn fx:id="sssEntrySNoCol" prefWidth="41.0" text="S/No" />
+            <TableColumn fx:id="sssEntryStdNoCol" prefWidth="140.0" text="Std Id" />
+            <TableColumn fx:id="sssEntryStdNameCol" prefWidth="242.0" text="Name" />
+            <TableColumn fx:id="sssEntryCA1Col" prefWidth="76.0" text="CA1" />
+            <TableColumn fx:id="sssEntryCA2Col" prefWidth="74.0" text="CA2" />
+            <TableColumn fx:id="sssEntryCA3Col" prefWidth="76.0" text="CA3" />
+            <TableColumn fx:id="sssEntryExamCol" prefWidth="88.0" text="Exam" />
+            <TableColumn fx:id="sssEntryTotalCol" prefWidth="81.0" text="Total" />
+            <TableColumn fx:id="sssEntryGradeCol" text="Grade" />
+         </columns>
+      </TableView>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="800.0">
+         <children>
+            <ToolBar prefHeight="36.0" prefWidth="432.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#refreshSssTableScoresEntry" prefHeight="29.0" prefWidth="170.0" text="REFRESH" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Button>
+                  <Button layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#xcelSSSTableScoreSheetsEntries" prefHeight="25.0" prefWidth="90.0" text="EXCEL" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Button>
+                  <Button fx:id="returnScoreSheetsSSSClass" cancelButton="true" layoutX="104.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleButtonAction72" prefHeight="25.0" prefWidth="90.0" text="RETURN" textFill="#240951">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Button>
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+   </children>
+</VBox>

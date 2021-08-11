@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="printPane5" dividerPositions="0.2590529247910863" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="898.0">
+         <children>
+            <ImageView fitHeight="76.0" fitWidth="88.0" layoutX="52.0" layoutY="6.0" pickOnBounds="true">
+               <image>
+                  <Image url="@kusaki.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="2.0" prefHeight="39.0" prefWidth="702.0" style="-fx-background-color: red;" text="K U S A K I  C O L L E G E  Y A N D E V" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="44.0" prefHeight="21.0" prefWidth="702.0" style="-fx-background-color: black;" text="Discipline and devotion" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="61.0" prefHeight="0.0" prefWidth="713.0" text="P. O. Box 135, Gboko, Benue State" textFill="#ff0000dd">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="annualCadre_LBL" alignment="CENTER" layoutX="212.0" layoutY="85.0" prefHeight="21.0" prefWidth="653.0" style="-fx-background-color: black;" text="ANNUAL ASSESSMENT SUMMARY (JSS/SSS)" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="82.0" prefHeight="25.0" prefWidth="207.0" text="ACADEMIC RECORD">
+               <font>
+                  <Font name="Sitka Banner Bold" size="13.0" />
+               </font>
+            </Label>
+            <HBox layoutX="14.0" layoutY="109.0" prefHeight="3.0" prefWidth="820.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="43.0" text="Name:" />
+                  <Label fx:id="nameAnnual_LBL" prefHeight="29.0" prefWidth="270.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="32.0" text="Sex:" />
+                  <Label fx:id="sexAnnual_LBL" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="32.0" text="Age:" />
+                  <Label fx:id="ageAnnual_LBL" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="38.0" text="Class:" />
+                  <Label fx:id="classAnnual_LBL" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="130.0" prefHeight="0.0" prefWidth="820.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="54.0" text="Session:" />
+                  <Label fx:id="sessionAnnual_LBL" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="69.0" text="No in Class:" />
+                  <Label fx:id="noInClassAnnual_LBL" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="132.0" text="No of days in the Year:" />
+                  <Label fx:id="noSchoolDaysAnnual" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="54.0" text="Present:" />
+                  <Label fx:id="noPresentsAnnual" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="47.0" text="Absent:" />
+                  <Label fx:id="noAbsentsAnnual" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="151.0" prefHeight="25.0" prefWidth="807.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="69.0" text="Total Score:" />
+                  <Label fx:id="totalScoreAnnual_LBL" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="55.0" text="  Average:" />
+                  <Label fx:id="avgAnnual_LBL" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="98.0" text="  Overall Position:" />
+                  <Label fx:id="overAllPositionAnnual_LBL" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="54.0" text="  Out of:" />
+                  <Label fx:id="outOfAnnual_LBL" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="25.0" prefWidth="41.0" text=" Id No:" />
+                  <TextField id="ladi" fx:id="idNoAnnual_LBL" prefHeight="0.0" prefWidth="116.0" stylesheets="@application.css" />
+               </children>
+            </HBox>
+            <ComboBox id="ladi" fx:id="yearAnnual_LBL" layoutX="828.0" layoutY="114.0" onMouseEntered="#annual_initialize" prefHeight="25.0" prefWidth="80.0" promptText="Year" stylesheets="@application.css" />
+            <Button id="dark-blue" fx:id="annual_SpoolResultButton" defaultButton="true" layoutX="829.0" layoutY="149.0" mnemonicParsing="false" onAction="#annual_SpoolResultActionButton" prefHeight="25.0" prefWidth="66.0" stylesheets="@application.css" text="Spool" textFill="#110a2f">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="annualScoresDataTable" layoutX="14.0" layoutY="14.0" prefHeight="433.0" prefWidth="859.0">
+              <columns>
+                <TableColumn fx:id="annualSubjectCol" prefWidth="143.0" text="SUBJECT" />
+                  <TableColumn fx:id="JSSexamCol" prefWidth="52.0" text="Annual Terminal Totals">
+                     <columns>
+                        <TableColumn fx:id="annualFirstTermCol" prefWidth="75.0" text="1st Term" />
+                        <TableColumn fx:id="annualSecondTermCol" prefWidth="75.0" text="2nd Term" />
+                        <TableColumn fx:id="annualThirdTermCol" prefWidth="75.0" text="3rd Term" />
+                     </columns></TableColumn>
+                  <TableColumn fx:id="annualTotalCol" prefWidth="69.0" text="Annual &#10;Total" />
+                  <TableColumn fx:id="annualClassAvgCol" prefWidth="68.0" text="Annual &#10;Avg" />
+                  <TableColumn fx:id="annualClassHighestCol" prefWidth="56.0" text="Class&#10;Highest" />
+                  <TableColumn fx:id="annualClassLowestCol" prefWidth="59.0" text="Class&#10;Lowest" />
+                  <TableColumn fx:id="annualGradeCol" prefWidth="60.0" text="Grade" />
+                  <TableColumn fx:id="annualPositionCol" prefWidth="69.0" text="Position" />
+                  <TableColumn fx:id="annualRemarksCol" prefWidth="110.0" text="Remark" />
+              </columns>
+            </TableView>
+            <HBox layoutX="14.0" layoutY="448.0" prefHeight="30.0" prefWidth="872.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="94.0" text="Form Master:" />
+                  <Label prefHeight="30.0" prefWidth="231.0" />
+                  <Label prefHeight="29.0" prefWidth="121.0" text="Comment/Signature:" />
+                  <Label prefHeight="30.0" prefWidth="242.0" />
+                  <Button id="dark-blue" fx:id="returntoKusakiGrtHomeAnnual" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction13" prefHeight="28.0" prefWidth="81.0" stylesheets="@application.css" text="Cancel" textFill="#130f3c">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="dark-blue" fx:id="annual_PrintResultBtn" mnemonicParsing="false" onAction="#annual_PrintResultButton" prefHeight="28.0" prefWidth="81.0" stylesheets="@application.css" text="Print" textFill="#130f3c">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="471.0" prefHeight="30.0" prefWidth="872.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="80.0" text="Principal:" />
+                  <Label prefHeight="30.0" prefWidth="247.0" />
+                  <Label prefHeight="29.0" prefWidth="126.0" text="Comment/Sign/Stamp:" />
+                  <Label prefHeight="30.0" prefWidth="231.0" />
+               </children>
+            </HBox>
+            <Label layoutX="14.0" layoutY="500.0" prefHeight="30.0" prefWidth="121.0" text="Next Term Begins:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="132.0" layoutY="501.0" prefHeight="25.0" prefWidth="280.0" style="-fx-background-color: lightgray;">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

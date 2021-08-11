@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="borderpane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <padding>
+      <Insets top="5.0" />
+   </padding>
+   <center>
+      <GridPane blendMode="MULTIPLY" cacheHint="QUALITY" depthTest="ENABLE" gridLinesVisible="true" hgap="5.0" onMouseMoved="#createClassMouseEvt" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: aliceblue;" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="0.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="10.0" prefWidth="244.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="idLbl2" style="-fx-font-size: 14;" textAlignment="CENTER" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="100.0" text="Class ID" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="IDLbl2" contentDisplay="RIGHT" text="Class" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="dateLbl" contentDisplay="RIGHT" text="Date of Entry" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker id="dateOfReg2" fx:id="createClassEntryDate" editable="false" prefHeight="44.0" prefWidth="150.0" promptText="Select your date of entry" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding></DatePicker>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+              <items>
+                  <Button id="bevel-grey" mnemonicParsing="false" onAction="#deleteStudentClassesButton" prefHeight="34.0" prefWidth="65.0" stylesheets="@application.css" text="Delete" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="bevel-grey" mnemonicParsing="false" onAction="#findCreateClassButton" prefHeight="34.0" prefWidth="60.0" stylesheets="@application.css" text="Find" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="bevel-grey" mnemonicParsing="false" onAction="#updateCreateClassesButton" prefHeight="34.0" prefWidth="71.0" stylesheets="@application.css" text="Update" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="bevel-grey" mnemonicParsing="false" onAction="#saveCreateClassesButton" prefHeight="34.0" prefWidth="70.0" stylesheets="@application.css" text="Submit" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+              </items>
+            </ToolBar>
+          <Button id="bevel-grey" fx:id="returnEnterCreateClass" mnemonicParsing="false" onAction="#handleButtonAction49" prefHeight="32.0" prefWidth="66.0" stylesheets="@application.css" text="Return" textFill="#240c4a" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label id="IDLbl2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Class Letter" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="createClassNo" editable="true" onMouseEntered="#createClassesComboInit" prefHeight="37.0" prefWidth="244.0" promptText="select a class to create" style="-fx-background-color: lightgreen;" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="createClassLetter" editable="true" onMouseEntered="#createClassesComboInit" prefHeight="37.0" prefWidth="244.0" promptText="select a class letter" style="-fx-background-color: lightgreen;" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="createClassTerm" editable="true" layoutX="491.0" layoutY="13.0" onMouseEntered="#createClassesComboInit" prefHeight="37.0" prefWidth="244.0" promptText="select a term" style="-fx-background-color: lightgreen;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="createClassYear" editable="true" layoutX="491.0" layoutY="13.0" onMouseEntered="#createClassesComboInit" prefHeight="37.0" prefWidth="244.0" promptText="select an academic year/session" style="-fx-background-color: lightgreen;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <Label id="IDLbl2" contentDisplay="RIGHT" layoutX="87.0" layoutY="24.0" text="Year" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label id="IDLbl2" contentDisplay="RIGHT" layoutX="10.0" layoutY="72.0" text="Term" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="createClassId" layoutX="126.0" layoutY="61.0" onMouseEntered="#createClassesComboInit" prefHeight="37.0" prefWidth="244.0" promptText="class identifier" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+         </children>
+         <effect>
+            <Lighting light="$null">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>

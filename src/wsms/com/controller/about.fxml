@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane id="windows7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="333.0" prefWidth="525.0" text="Webstartrek School Management System&#10;CopyRight Protected (2018). This is a product of Webstartrek Ltd and should be used in tandem with the agreed terms and agreement. The right to the usage of this software is not transferrable. &#10;WSMS (Webstartrek School Management System) eases the jobs of managing and administering admissions, school records management, results processing and provides a very robust financial management system similar to the banking system, etc.  for all levels of educational institutions. &#10;&#10;WSMS is alive and evolving with you...&#10;&#10;&#10;&#10;Contact Information&#10;Email: webstartrek@outlook.com&#10;Mobile: +2348026339133, 8032054611" textAlignment="CENTER" textFill="#1c054d" wrapText="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </center>
+   <bottom>
+      <Button id="windows7-default" fx:id="returnAboutLogin" cancelButton="true" defaultButton="true" onAction="#handleAboutMenuItemClick" prefHeight="31.0" prefWidth="94.0" stylesheets="@application.css" text="OK" textFill="#460a6f" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </bottom>
+</BorderPane>

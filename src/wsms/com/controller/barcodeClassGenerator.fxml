@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="borderpane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <padding>
+      <Insets top="5.0" />
+   </padding>
+   <center>
+      <VBox fillWidth="false" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane blendMode="MULTIPLY" cacheHint="QUALITY" depthTest="ENABLE" gridLinesVisible="true" hgap="5.0" onMouseMoved="#cscInfoInitX3" prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: aliceblue;" vgap="5.0">
+               <children>
+                  <Label id="idLbl2" style="-fx-font-size: 14;" textAlignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField id="previousSchool2" fx:id="classBarcodeStatus" prefHeight="32.0" prefWidth="300.0" promptText="class barcode status" style="-fx-background-color: lightgray;" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label id="dateLbl" contentDisplay="RIGHT" text="Date of Entry" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <DatePicker id="dateOfReg2" fx:id="barcodeEntryDate" editable="false" prefHeight="44.0" prefWidth="150.0" promptText="Select your date of entry" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+                  <Button fx:id="returnEnterGenClassBarcodeBtn" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction62" prefHeight="50.0" prefWidth="115.0" text="RETURN" textFill="#f50505" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label id="IDLbl2" contentDisplay="RIGHT" layoutX="87.0" layoutY="24.0" text="Select Class" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <items>
+                        <Button mnemonicParsing="false" onAction="#listMoveCurrentClassButton" prefHeight="39.0" prefWidth="112.0" text="List Std in Class">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                        </Button>
+                     </items>
+                  </ToolBar>
+                  <TextArea fx:id="barcodeDisplayStatus" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="status report" style="-fx-background-color: red;" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin></TextArea>
+                  <ComboBox fx:id="barcodeCurrentClass" layoutX="511.0" layoutY="39.0" onMouseEntered="#barClassComboInit" prefHeight="37.0" prefWidth="244.0" promptText="select class - generate barcode" style="-fx-background-color: lightgreen;" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="barcodeStdId" layoutX="131.0" layoutY="15.0" onMouseEntered="#barClassComboInit" prefHeight="37.0" prefWidth="244.0" promptText="select std - generate barcode" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Label id="IDLbl2" contentDisplay="RIGHT" layoutX="16.0" layoutY="26.0" text="Select std from above Class" textAlignment="RIGHT" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#genBarcode4StdButton" prefHeight="34.0" prefWidth="101.0" style="-fx-background-color: cyan;" text="Barcode Std" textFill="#130875" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#genBarcode4ClassButton" prefHeight="34.0" prefWidth="114.0" text="Barcode Class" textFill="#130875" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField id="previousSchool2" fx:id="stdBarcodeId" prefHeight="32.0" prefWidth="300.0" promptText="std barcode id" style="-fx-background-color: lightgray;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="0.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="10.0" prefWidth="244.0" />
+               </columnConstraints>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting light="$null">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <TableView fx:id="barcodeClassGenDataTable" prefHeight="424.0" prefWidth="789.0">
+              <columns>
+                <TableColumn fx:id="astcSNoCol5" prefWidth="41.0" text="S/No" />
+                <TableColumn fx:id="astcStdIdCol5" prefWidth="109.0" text="Std Id" />
+                  <TableColumn fx:id="astcNameCol5" prefWidth="215.0" text="Name" />
+                  <TableColumn fx:id="astcSexCol5" prefWidth="75.0" text="Sex" />
+                  <TableColumn fx:id="astcAgeCol5" prefWidth="49.0" text="Age" />
+                  <TableColumn fx:id="astcBorderCol5" prefWidth="98.0" text="Border Status" />
+                  <TableColumn fx:id="barcodeGenStatusCol" prefWidth="192.0" text="Barcode Generation Status" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

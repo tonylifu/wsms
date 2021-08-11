@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="printPaneAnnualSubjectClass" dividerPositions="0.25" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="898.0">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="108.0" layoutX="49.0" layoutY="9.0" pickOnBounds="true">
+               <image>
+                  <Image url="@kusaki.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="9.0" prefHeight="39.0" prefWidth="702.0" style="-fx-background-color: red;" text="K U S A K I  C O L L E G E  Y A N D E V" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="56.0" prefHeight="21.0" prefWidth="702.0" style="-fx-background-color: black;" text="Discipline and devotion" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="78.0" prefHeight="0.0" prefWidth="713.0" text="P. O. Box 135, Gboko, Benue State" textFill="#ff0000dd">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="212.0" layoutY="102.0" prefHeight="21.0" prefWidth="653.0" style="-fx-background-color: black;" text="CLASS ANNUAL TRANSCRIPTS BY SUBJECTS" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="102.0" prefHeight="21.0" prefWidth="159.0" text="ACADEMIC RECORD">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox layoutX="14.0" layoutY="132.0" prefHeight="3.0" prefWidth="820.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="43.0" text="Class" />
+                  <Label id="ladi" fx:id="annualSubjectClass_LBL" prefHeight="17.0" prefWidth="86.0" stylesheets="@application.css">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="105.0" text="Academic Session" />
+                  <Label id="ladi" fx:id="annualSubjectSession_LBL" prefHeight="29.0" prefWidth="88.0" stylesheets="@application.css">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="38.0" text="Term:" />
+                  <Label id="ladi" fx:id="annualSubjectTerm_LBL" prefHeight="29.0" prefWidth="88.0" stylesheets="@application.css">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="69.0" text="No in Class:" />
+                  <Label id="ladi" fx:id="annualSubjectNoInClass_LBL" prefHeight="29.0" prefWidth="88.0" stylesheets="@application.css">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="101.0" text="Class Total Score:" />
+                  <Label id="ladi" fx:id="annualSubjectClassTotal_LBL" prefHeight="29.0" prefWidth="97.0" stylesheets="@application.css">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <ComboBox id="ladi" fx:id="annualSubjectYear_Combo" layoutX="820.0" layoutY="120.0" onMouseEntered="#annualSubject_initialize" prefHeight="30.0" prefWidth="88.0" promptText="Year" stylesheets="@application.css" />
+            <Button id="dark-blue" fx:id="annualSubjectClassSpoolBtn" defaultButton="true" layoutX="833.0" layoutY="151.0" mnemonicParsing="false" onAction="#annualSubjectClassSpoolButton" prefHeight="25.0" prefWidth="66.0" stylesheets="@application.css" text="Spool" textFill="#110a2f">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox id="ladi" fx:id="annualSubjectClassLetter_Combo" editable="true" layoutX="829.0" layoutY="89.0" onMouseEntered="#annualSubject_initialize" prefHeight="25.0" prefWidth="78.0" promptText="Letter" stylesheets="@application.css" />
+            <ComboBox id="ladi" fx:id="annualSubjectClass_Combo" editable="true" layoutX="742.0" layoutY="89.0" onMouseEntered="#annualSubject_initialize" prefHeight="25.0" prefWidth="78.0" promptText="Class" stylesheets="@application.css" />
+            <TextField fx:id="annualSubjectError_TF" editable="false" layoutX="310.0" layoutY="151.0" prefHeight="25.0" prefWidth="353.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="annualSubjectClassDataTable" layoutX="14.0" layoutY="14.0" prefHeight="476.0" prefWidth="859.0" style="-fx-background-color: aliceblue;">
+              <columns>
+                <TableColumn fx:id="annualSubjectSNoCol" prefWidth="38.0" text="S/No" />
+                  <TableColumn fx:id="annualSubjectStdIdCol" text="Student ID" />
+                  <TableColumn fx:id="annualSubjectNameCol" prefWidth="176.0" text="Names" />
+                  <TableColumn fx:id="annualSubjectSubjectsCol" prefWidth="157.0" text="Subjects" />
+                  <TableColumn fx:id="annualFirstSubjCol" prefWidth="44.0" text="1st &#10;Term" />
+                  <TableColumn fx:id="annualSecondSubCol" prefWidth="53.0" text="2nd&#10;Term" />
+                  <TableColumn fx:id="annualThirdSubCol" prefWidth="51.0" text="3rd&#10;Term" />
+                  <TableColumn fx:id="annualTotalSubCol" prefWidth="58.0" text="Total" />
+                  <TableColumn fx:id="annualAverageSubjCol" prefWidth="63.0" text="Mean&#10;100%" />
+                  <TableColumn fx:id="annualPositionSubjCol" prefWidth="75.0" text="\%" />
+                  <TableColumn fx:id="annualPercentageSubjCol" prefWidth="62.0" text="Position" />
+              </columns>
+            </TableView>
+            <Button id="dark-blue" fx:id="returnAnnualSubjectGenReportHome" cancelButton="true" layoutX="659.0" layoutY="494.0" mnemonicParsing="false" onAction="#handleButtonAction19" prefHeight="30.0" prefWidth="71.0" stylesheets="@application.css" text="Cancel" textFill="#130f3c">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button id="dark-blue" fx:id="genAnnualSubjectExcelBtn" layoutX="732.0" layoutY="494.0" mnemonicParsing="false" onAction="#genAnnualSubjectExcelButton" prefHeight="30.0" prefWidth="92.0" stylesheets="@application.css" text="Gen Excel" textFill="#130f3c">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button id="dark-blue" fx:id="annualSubjectClass_PrintResultBtn" layoutX="827.0" layoutY="494.0" mnemonicParsing="false" onAction="#annualSubjectClass_PrintResultButton" prefHeight="30.0" prefWidth="70.0" stylesheets="@application.css" text="Print" textFill="#130f3c">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

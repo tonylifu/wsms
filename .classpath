@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/stuffs/mysql-connector-java-5.1.44/mysql-connector-java-5.1.44/mysql-connector-java-5.1.44-bin.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jar_files_2/trove4j-3.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jar_files_3/noexception-1.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jar_files_3/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/poi-3.9.jar/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/zxing-1.7-javase.jar/zxing-1.7-javase.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/zxing-2.0-core.jar/zxing-2.0-core.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/webcam-capture-0.3.10-dist/webcam-capture-0.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/webcam-capture-0.3.10-dist/libs/bridj-0.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/webcam-capture-0.3.10-dist/libs/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jar_files/com.sun.mail_1.4.2.jar/com.sun.mail_1.4.2.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jar_files/jar_files/base64-2.3.7.jar/base64-2.3.7.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jar_files/jar_files/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jar_files/jar_files/mailapi-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jar_files/org-apache-commons-codec.jar/org-apache-commons-codec.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jar_files/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/eclipselink-2.7.1.v20171221-bd47e8f/eclipselink/jlib/eclipselink.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/eclipselink-2.7.1.v20171221-bd47e8f/eclipselink/jlib/jpa/javax.persistence.source_2.2.0.v201708071007.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/eclipselink-2.7.1.v20171221-bd47e8f/eclipselink/jlib/jpa/javax.persistence_2.2.0.v201708071007.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/eclipselink-2.7.1.v20171221-bd47e8f/eclipselink/jlib/jpa/org.eclipse.persistence.jpa.modelgen.source_2.7.1.v20171221-bd47e8f.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/eclipselink-2.7.1.v20171221-bd47e8f/eclipselink/jlib/jpa/org.eclipse.persistence.jpa.modelgen_2.7.1.v20171221-bd47e8f.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/eclipselink-2.7.1.v20171221-bd47e8f/eclipselink/jlib/jpa/org.eclipse.persistence.jpars.source_2.7.1.v20171221-bd47e8f.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/eclipselink-2.7.1.v20171221-bd47e8f/eclipselink/jlib/jpa/org.eclipse.persistence.jpars_2.7.1.v20171221-bd47e8f.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jasperreports-6.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jasperreports-fonts-6.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/jasperreports-javaflow-6.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/stuffs/opencv-341.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

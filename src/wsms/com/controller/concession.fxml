@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <left>
+      <VBox prefHeight="461.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="473.0" text="Student Information Central" textFill="#166582">
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Button id="windows7-default" fx:id="enterAdmissionBtn" mnemonicParsing="false" onAction="#handleButtonAction101" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Admission">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="createNewStudentButton" mnemonicParsing="false" onAction="#handleButtonAction" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Create Student">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="findStudentButton" mnemonicParsing="false" onAction="#handleButtonAction2" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Update Student">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterConcessionBtn" mnemonicParsing="false" onAction="#handleButtonAction92" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Concession">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterBarcodeEnqBtn" mnemonicParsing="false" onAction="#handleButtonAction63" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Barcode">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterBiometricBtn" mnemonicParsing="false" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Biometric">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterUploadPhotoBtn" mnemonicParsing="false" onAction="#handleButtonAction31" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Image Capture">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterDiscRecBtn" mnemonicParsing="false" onAction="#handleButtonAction56" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Student Affairs">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="39.0" prefWidth="725.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutY="11.0" prefHeight="17.0" prefWidth="3000.0" text="© 2019 Webstartrek Ltd" textFill="#166582">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="481.0" prefWidth="467.0" style="-fx-background-color: aliceblue;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="473.0" text="Concession" textFill="#166582">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TabPane maxHeight="900.0" prefHeight="554.0" prefWidth="716.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Create Concession">
+                        <content>
+                              <VBox onMouseMoved="#concessionInit" prefHeight="515.0" prefWidth="716.0">
+                                 <children>
+                                    <GridPane vgap="10.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="113.0" text="Student ID" textFill="#166582" wrapText="true" GridPane.halignment="RIGHT">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="12.0" prefHeight="32.0" prefWidth="113.0" text="Sex/Name" textFill="#166582" wrapText="true" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="12.0" prefHeight="32.0" prefWidth="113.0" text="Class/Year/Term" textFill="#166582" wrapText="true" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="40.0" prefHeight="32.0" prefWidth="113.0" text="Search Entries" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField id="ladi" fx:id="concStdNo" promptText="id" stylesheets="@application.css" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <HBox prefWidth="1000.0" GridPane.columnIndex="3">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                             <children>
+                                                <TextField id="ladi" fx:id="concSex" editable="false" promptText="sex" stylesheets="@application.css" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <TextField id="ladi" fx:id="concName" editable="false" promptText="name" stylesheets="@application.css" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="42.0" prefHeight="32.0" prefWidth="113.0" text="Available Bal" textFill="#166582" wrapText="true" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="70.0" prefHeight="32.0" prefWidth="113.0" text="Bal at Conc" textFill="#166582" wrapText="true" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField id="ladi" fx:id="availBalConc" editable="false" promptText="available balance" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="102.0" prefHeight="32.0" prefWidth="113.0" text="Txn Date" textFill="#166582" wrapText="true" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="130.0" prefHeight="32.0" prefWidth="113.0" text="Updated Bal" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="130.0" prefHeight="32.0" prefWidth="113.0" text="Future Pay Date" textFill="#166582" wrapText="true" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="190.0" prefHeight="32.0" prefWidth="113.0" text="Amt to Pay" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="190.0" prefHeight="32.0" prefWidth="113.0" text="Days Given" textFill="#166582" wrapText="true" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="222.0" prefHeight="32.0" prefWidth="113.0" text="Days Left" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="252.0" prefHeight="32.0" prefWidth="113.0" text="Status" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="322.0" layoutY="252.0" prefHeight="32.0" prefWidth="113.0" text="Any other Info" textFill="#166582" wrapText="true" GridPane.rowIndex="9">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField id="ladi" fx:id="graceDaysGivenConc" editable="false" promptText="Grace Days Given" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <ComboBox id="ladi" fx:id="concessionStatusCombo" layoutX="422.0" layoutY="223.0" onMouseEntered="#concStatusComboInit" prefWidth="200.0" promptText="concession status" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </ComboBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <TextField id="ladi" fx:id="concStdClassId" editable="false" promptText="classId" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <TextField id="ladi" fx:id="concSession" editable="false" promptText="year" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <TextField id="ladi" fx:id="concTerm" editable="false" promptText="term" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <children>
+                                                <ComboBox id="ladi" fx:id="concessionId" onMouseEntered="#concIdComboInit" prefWidth="200.0" promptText="CID" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <Button id="dark-blue" mnemonicParsing="false" onAction="#findConcessionRequest" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="FIND">
+                                                   <HBox.margin>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <TextField id="ladi" fx:id="balAtConc" editable="false" layoutX="112.0" layoutY="87.0" promptText="balance at concession" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <TextField id="ladi" fx:id="amtToPayConc" layoutX="112.0" layoutY="87.0" promptText="amount to pay at concession" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <DatePicker id="ladi" fx:id="txnDateConc" layoutX="418.0" layoutY="399.0" prefWidth="200.0" promptText="txn date" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </DatePicker>
+                                          <TextField id="ladi" fx:id="updBalanceConc" editable="false" layoutX="418.0" layoutY="126.0" promptText="updated balance" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <DatePicker id="ladi" fx:id="expectedPayDateConc" layoutX="112.0" layoutY="165.0" prefWidth="200.0" promptText="concession expires date" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </DatePicker>
+                                          <TextField id="ladi" fx:id="graceDaysRemainsConc" editable="false" layoutX="112.0" layoutY="282.0" promptText="Grace Days Left" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <TextArea id="ladi" fx:id="aoiConc" prefHeight="200.0" prefWidth="200.0" promptText="aoi" stylesheets="@application.css" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextArea>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="40.0" left="2.0" right="2.0" top="2.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                    <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                                       <items>
+                                          <Button id="dark-blue" defaultButton="true" mnemonicParsing="false" onAction="#saveConcessionRequest" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="SAVE" />
+                                          <Button id="dark-blue" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#updateConcessionRequest" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="UPDATE" />
+                                          <Button id="dark-blue" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#deleteConcessionRequest" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="DELETE" />
+                                          <Button id="dark-blue" fx:id="returnConcessionBtn" cancelButton="true" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonAction92" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="RETURN" />
+                                       </items>
+                                    </ToolBar>
+                                 </children>
+                              </VBox>
+                        </content>
+                      </Tab>
+                      <Tab text="Concession List">
+                           <content>
+                              <VBox fx:id="concessionPane" prefHeight="518.0" prefWidth="716.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="616.0">
+                                       <children>
+                                          <Label fx:id="concListLabel" prefHeight="30.0" prefWidth="71.0" textFill="#9a2727" wrapText="true">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox id="ladi" fx:id="concListSessionCombo" onMouseClicked="#concListSessionInit" prefHeight="30.0" prefWidth="103.0" promptText="session" stylesheets="@application.css">
+                                             <HBox.margin>
+                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                          <ComboBox id="ladi" fx:id="concListTermCombo" onMouseClicked="#concListStatusInit" prefHeight="30.0" prefWidth="87.0" promptText="term" stylesheets="@application.css">
+                                             <HBox.margin>
+                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                             </HBox.margin></ComboBox>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="80.0" text="Student Class">
+                                             <HBox.margin>
+                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                             </HBox.margin></Label>
+                                          <ComboBox id="ladi" fx:id="concListClassCombo" onMouseEntered="#concListClassInit" prefHeight="30.0" prefWidth="127.0" promptText="select class" stylesheets="@application.css">
+                                             <HBox.margin>
+                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                             </HBox.margin></ComboBox>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="43.0" text="Status">
+                                             <HBox.margin>
+                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                             </HBox.margin></Label>
+                                          <ComboBox id="ladi" fx:id="concListStatusCombo" onMouseClicked="#concListStatusInit" prefHeight="30.0" prefWidth="138.0" promptText="select status" stylesheets="@application.css">
+                                             <HBox.margin>
+                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                             </HBox.margin></ComboBox>
+                                          <Button id="dark-blue" fx:id="concListSpoolBtn" defaultButton="true" mnemonicParsing="false" onAction="#concListSpoolButton" prefHeight="30.0" prefWidth="80.0" stylesheets="@application.css" text="Spool">
+                                             <HBox.margin>
+                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                             </HBox.margin></Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <TableView fx:id="concessionDataTable" prefHeight="439.0" prefWidth="712.0">
+                                       <columns>
+                                          <TableColumn fx:id="concSNoCol" prefWidth="42.0" text="S/No" />
+                                          <TableColumn fx:id="concStdNoCol" prefWidth="91.00003051757812" text="Std No" />
+                                          <TableColumn fx:id="concStdNameCol" prefWidth="217.99993896484375" text="Name" />
+                                          <TableColumn fx:id="concStdClassCol" prefWidth="109.00006103515625" text="Std Class" />
+                                          <TableColumn fx:id="concDateCol" prefWidth="76.0" text="Concession&#10;Date" />
+                                          <TableColumn fx:id="concExpiresCol" prefWidth="93.0" text="Concession &#10;Expires" />
+                                          <TableColumn fx:id="concDaysCol" prefWidth="77.0" text="Grace Days &#10;Remains" />
+                                          <TableColumn fx:id="concStatusCol" prefWidth="120.0" text="Status" />
+                                       </columns>
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                    <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                                       <items>
+                                          <Button id="dark-blue" fx:id="printConcListBtn" mnemonicParsing="false" onAction="#printConcListButton" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="PRINT" />
+                                          <Button id="dark-blue" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#xcelConcListButton" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="EXCEL" fx:id="xcelConcListBtn" />
+                                          <Button id="dark-blue" fx:id="returnConcListBtn" cancelButton="true" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonAction92" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="RETURN" />
+                                       </items>
+                                    </ToolBar>
+                                 </children>
+                              </VBox>
+                           </content>
+                      </Tab>
+                    </tabs>
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                  </TabPane>
+               </children>
+            </VBox>
+         </children></VBox>
+   </center>
+   <top>
+      <VBox prefHeight="46.0" prefWidth="725.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="40.0" prefWidth="725.0">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@webstartreklogo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="44.0" prefWidth="3000.0" style="-fx-background-color: #166582;">
+                    <items>
+                      <Button id="windows7-default" fx:id="logOffHomeButton" mnemonicParsing="false" onAction="#quitPlatformButton" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Log Out" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="About" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Help" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@help.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="windows7-default" fx:id="returnStdCreateHome" layoutX="126.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleButtonAction93" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Home" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                    </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+</BorderPane>

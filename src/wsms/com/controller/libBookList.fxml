@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="printPaneLibBooks" dividerPositions="0.24" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="898.0">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="89.0" layoutX="36.0" layoutY="9.0" pickOnBounds="true">
+               <image>
+                  <Image url="@kusaki.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="212.0" layoutY="102.0" prefHeight="21.0" prefWidth="653.0" style="-fx-background-color: black;" text="LIST OF LIBRARY BOOKS" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="102.0" prefHeight="21.0" prefWidth="159.0" text="LIBRARY RECORD">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="132.0" prefHeight="26.0" prefWidth="852.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="71.0" text="Total Books:" />
+                  <Label id="ladi" fx:id="libBooksTotal" prefHeight="17.0" prefWidth="54.0" stylesheets="@application.css">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="60.0" text="Available:" />
+                  <Label id="ladi" fx:id="libBooksAvailable" prefHeight="17.0" prefWidth="57.0" stylesheets="@application.css">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="81.0" text="Not Available:" />
+                  <Label id="ladi" fx:id="libBooksNotAvailable" prefHeight="17.0" prefWidth="59.0" stylesheets="@application.css">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="libBookListError" editable="false" prefHeight="25.0" prefWidth="344.0" style="-fx-background-color: aliceBlue;" />
+                  <Button id="dark-blue" fx:id="spoolLibBooksListBtn" mnemonicParsing="false" onAction="#spoolLibBooksListButton" prefHeight="25.0" prefWidth="89.0" stylesheets="@application.css" text="Spool" textFill="#110a2f">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="9.0" prefHeight="39.0" prefWidth="702.0" style="-fx-background-color: red;" text="K U S A K I  C O L L E G E  Y A N D E V" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="53.0" prefHeight="21.0" prefWidth="702.0" style="-fx-background-color: black;" text="Discipline and devotion" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="76.0" prefHeight="0.0" prefWidth="713.0" text="P. O. Box 135, Gboko, Benue State" textFill="#ff0000dd">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="libBooksDataTable" layoutX="14.0" layoutY="14.0" prefHeight="487.0" prefWidth="859.0">
+              <columns>
+                <TableColumn fx:id="libBooksSNoCol" prefWidth="44.0" text="S/No" />
+                  <TableColumn fx:id="libBooksISBNCol" prefWidth="128.0" text="ISBN" />
+                  <TableColumn fx:id="libBooksBkTitleCol" prefWidth="283.0" text="Book Title" />
+                  <TableColumn fx:id="libBooksBkAuthorsCol" prefWidth="200.0" text="Book Author(s)" />
+                  <TableColumn fx:id="libBooksEdYrCol" prefWidth="109.0" text="Edition/Year" />
+                  <TableColumn fx:id="libBooksStatusCol" prefWidth="94.0" text="Status" />
+              </columns>
+            </TableView>
+            <HBox layoutX="14.0" layoutY="506.0" prefHeight="30.0" prefWidth="872.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="94.0" text="Library Officer:" />
+                  <Label prefHeight="30.0" prefWidth="265.0" />
+                  <Label prefHeight="29.0" prefWidth="117.0" text="Comment/Signature:" />
+                  <Label prefHeight="30.0" prefWidth="147.0" />
+                  <Button id="dark-blue" fx:id="returnBookLibHome" mnemonicParsing="false" onAction="#handleButtonAction27" prefHeight="38.0" prefWidth="71.0" stylesheets="@application.css" text="Cancel" textFill="#130f3c">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="dark-blue" fx:id="genExcelLibBkListBtn" mnemonicParsing="false" onAction="#genExcelLibBkListButton" prefHeight="38.0" prefWidth="92.0" stylesheets="@application.css" text="Gen Excel" textFill="#130f3c">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="dark-blue" fx:id="printLibBkListBtn" mnemonicParsing="false" onAction="#printLibBkListButton" prefHeight="38.0" prefWidth="70.0" stylesheets="@application.css" text="Print" textFill="#130f3c">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

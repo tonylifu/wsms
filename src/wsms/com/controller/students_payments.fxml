@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="608.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <TitledPane animated="false" prefHeight="616.0" prefWidth="771.0" text="Payment Entry" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="558.0" prefWidth="769.0">
+               <children>
+                  <GridPane gridLinesVisible="true" layoutY="1.0" onMouseMoved="#defineAccessLevel2" prefHeight="557.0" prefWidth="771.0" style="-fx-background-color: lightgray;">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="ID No" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="stdId_fin_TF" onMouseExited="#validateLastPayment" prefHeight="50.0" prefWidth="289.0" promptText="Enter Student ID and verify record" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="stdName_fin_TF" editable="false" prefHeight="46.0" prefWidth="289.0" promptText="Click on verify above..." GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Names" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="45.0" text="Class">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="stdClass_fin_TF" onMouseEntered="#initialize7" prefHeight="40.0" prefWidth="118.0" promptText="select option" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="49.0" text="Term">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="stdTerm_fin_TF" onMouseEntered="#initialize7" prefHeight="39.0" prefWidth="118.0" promptText="select option" />
+                           </children>
+                        </FlowPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="76.0" prefWidth="123.0" text="Total Due Payments">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="totalPaymentDue_TF" prefHeight="79.0" prefWidth="225.0" promptText="Due Payments">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: skyblue;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                           <items>
+                              <Button fx:id="validateStdPaymentBtn" mnemonicParsing="false" onAction="#validateStdPaymentProfile" prefHeight="40.0" prefWidth="71.0" text="Validate" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="updateStdPaymentBtn" mnemonicParsing="false" onAction="#updateStdPaymentProfile" prefHeight="40.0" prefWidth="73.0" text="Update" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="addStdPaymentBtn" mnemonicParsing="false" onAction="#addStdPaymentProfile" prefHeight="40.0" prefWidth="71.0" text="Add" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="createStdPaymentBtn" mnemonicParsing="false" onAction="#createStdPaymentProfile" prefHeight="40.0" prefWidth="100.0" text="Create" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="ID">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <items>
+                              <Button fx:id="returnFeesMgtButton_2" mnemonicParsing="false" onAction="#handleButtonAction9_2" prefHeight="40.0" prefWidth="61.0" text="Return" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="deleteStdPaymentBtn" mnemonicParsing="false" onAction="#deleteStdPaymentButton" onMouseMoved="#defineAccessLevel2" prefHeight="40.0" prefWidth="65.0" text="Delete" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="97.0" text="Bulk Payment" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="stdPayHistButton" mnemonicParsing="false" onAction="#handleButtonAction10" text="Print Std&#10;History" textFill="#14052c">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <TextField fx:id="paymentId_TF" prefHeight="46.0" prefWidth="138.0" promptText="for validating: &quot;StdID + ReceiptNo&quot;" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Payment ID" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Description" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="description_fin_TF" editable="true" onMouseEntered="#initialize7" prefHeight="53.0" prefWidth="324.0" promptText="Description - payment details" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <FlowPane prefHeight="36.0" prefWidth="360.0" GridPane.columnIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#verifyStdIdentification" prefHeight="39.0" prefWidth="79.0" text="Verify ID" textFill="#090468">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets top="20.0" />
+                                 </FlowPane.margin>
+                              </Button>
+                              <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="123.0" text="Academic Year">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets top="20.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <ComboBox fx:id="academicYear_fin_TF" editable="true" onMouseEntered="#initialize7" prefHeight="39.0" prefWidth="146.0" promptText="select option">
+                                 <FlowPane.margin>
+                                    <Insets top="20.0" />
+                                 </FlowPane.margin></ComboBox>
+                           </children>
+                        </FlowPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="76.0" prefWidth="123.0" text="Actual Payment">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="actualPaymentMade_TF" prefHeight="79.0" prefWidth="225.0" promptText="Actual Payments">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="76.0" prefWidth="123.0" text="Balance Due">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="balanceDue_TF" editable="false" prefHeight="79.0" prefWidth="225.0" promptText="Due Payments">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="39.0" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="123.0" text="Received By">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="receivedBy_TF" prefHeight="46.0" prefWidth="225.0" promptText="Payment received by">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="39.0" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="123.0" text="Payment By">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="paymentBy_TF" prefHeight="46.0" prefWidth="225.0" promptText="Payment made by">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="79.0" prefWidth="35.0" text="Date">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="date_fin_TF" prefHeight="48.0" prefWidth="118.0">
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <Label alignment="CENTER_RIGHT" prefHeight="79.0" prefWidth="76.0" text="Receipt No">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="receiptNo_TF" prefHeight="45.0" prefWidth="117.0" promptText="Receipt Number">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="85.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.0" minWidth="10.0" prefWidth="326.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="360.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </center>
+</BorderPane>

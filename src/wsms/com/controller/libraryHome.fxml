@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <TitledPane alignment="TOP_CENTER" animated="false" prefHeight="520.0" prefWidth="507.0" text="School Record Management System" textFill="#104337" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="486.0" fitWidth="501.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" style="-fx-background-color: brown;">
+                     <image>
+                        <Image url="@school2.jpg" />
+                     </image>
+                  </ImageView>
+                <Button fx:id="createLibBook" layoutX="193.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleButtonAction24" prefHeight="29.0" prefWidth="153.0" style="-fx-background-color: white;" text="Create Library Book" textAlignment="CENTER" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="lendBookBtn" layoutX="193.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleButtonAction25" prefHeight="29.0" prefWidth="153.0" style="-fx-background-color: white;" text="Lending A Book" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bookReturnBtn" layoutX="193.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleButtonAction26" prefHeight="29.0" prefWidth="153.0" style="-fx-background-color: white;" text="Returning A Book" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="listLibBooksButton" layoutX="191.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleButtonAction27" prefHeight="29.0" prefWidth="155.0" style="-fx-background-color: white;" text="List of Library Books" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="listLibBooksLentButton" layoutX="193.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleButtonAction28" prefHeight="29.0" prefWidth="153.0" style="-fx-background-color: white;" text="List of Lent Books" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="listLibBooksOverdueButton" layoutX="192.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleButtonAction29" prefHeight="29.0" prefWidth="155.0" style="-fx-background-color: white;" text="Overdue Books" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="returnLibrarySysBtn" layoutX="229.0" layoutY="425.0" mnemonicParsing="false" onAction="#handleButtonAction23" prefHeight="28.0" prefWidth="81.0" style="-fx-background-color: white;" text="Return" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="AR JULIAN" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TitledPane>
+   </center>
+</BorderPane>

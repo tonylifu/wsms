@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <Pane prefHeight="0.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <TitledPane animated="false" prefHeight="300.0" prefWidth="500.0" text="Subjects Entry">
+               <content>
+                  <GridPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: aliceblue;">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="82.0" prefWidth="156.0" text="Subject Code">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="82.0" prefWidth="156.0" text="Subject" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="82.0" prefWidth="156.0" text="Teacher" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="teacherNameTF" prefHeight="48.0" prefWidth="429.0" promptText="Enter teacher's name " GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="subjectIdTF" prefHeight="48.0" prefWidth="429.0" promptText="Enter subject code" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" right="200.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <ToolBar prefHeight="65.0" prefWidth="429.0" style="-fx-background-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#deleteSubjectButton" prefHeight="43.0" prefWidth="66.0" text="Delete" textFill="#250707">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#validateSubjectButton" prefHeight="44.0" prefWidth="63.0" text="Find" textFill="#250707">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#updateSubjectButton" prefHeight="44.0" prefWidth="82.0" text="Update" textFill="#250707">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#saveButton" prefHeight="43.0" prefWidth="85.0" text="Save" textFill="#250707">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <Button fx:id="returnAddDeleteSubjectsButton" mnemonicParsing="false" onAction="#handleButtonAction5" prefHeight="43.0" prefWidth="86.0" text="Return" textFill="#250707" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <ComboBox fx:id="subjectNameTF" editable="true" onMouseEntered="#subjectComboInit" prefHeight="50.0" prefWidth="429.0" promptText="enter subject name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="50.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="149.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="429.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </TitledPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

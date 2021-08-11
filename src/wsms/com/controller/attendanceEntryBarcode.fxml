@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane gridLinesVisible="true" hgap="2.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="550.0" vgap="2.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <children>
+    <TextField fx:id="barcodeAttendInput" onKeyPressed="#barcodeAttendDetailsInit" promptText="barcode input" style="-fx-background-color: lightblue;" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="200.0" top="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+    <VBox maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" prefWidth="400.0" spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <children>
+            <HBox prefHeight="28.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="29.0" text="Sex">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="barcodeAttendSex" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="129.0" promptText="sex" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></TextField>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="38.0" text="Age">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="barcodeAttendAge" editable="false" focusTraversable="false" layoutX="32.0" layoutY="10.0" prefHeight="25.0" prefWidth="111.0" promptText="age" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label layoutX="150.0" layoutY="10.0" prefHeight="30.0" prefWidth="38.0" text="Class">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="barcodeAttendClass" editable="false" focusTraversable="false" layoutX="188.0" layoutY="10.0" prefHeight="25.0" prefWidth="111.0" promptText="class" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="47.0" text="Session" />
+                  <TextField fx:id="barcodeAttendYear" editable="false" focusTraversable="false" prefHeight="37.0" prefWidth="75.0" promptText="year" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="32.0" text="Term" />
+                  <TextField fx:id="barcodeAttendTerm" editable="false" focusTraversable="false" layoutX="32.0" layoutY="10.0" prefHeight="37.0" prefWidth="55.0" promptText="term" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefHeight="30.0" prefWidth="52.0" text="Absents" />
+                  <TextField fx:id="barcodeAttendAbsents" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="67.0" promptText="absents" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefHeight="30.0" prefWidth="52.0" text="Presents" />
+                  <TextField fx:id="barcodeAttendPresents" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="67.0" promptText="present" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="88.0" text="Attendance&#10;Term Count " wrapText="true" />
+                  <TextField fx:id="barcodeAttendTermPossible" editable="false" focusTraversable="false" prefHeight="39.0" prefWidth="81.0" promptText="termly school days" style="-fx-background-color: lightgreen;">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="90.0" text="Attendance&#10;Current Count " wrapText="true" />
+                  <TextField fx:id="barcodeAttendTermCurrent" editable="false" focusTraversable="false" layoutX="81.0" layoutY="10.0" prefHeight="39.0" prefWidth="81.0" promptText="current school days" style="-fx-background-color: lightgreen;">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="452.0">
+               <children>
+                  <TextArea fx:id="barcodeAttendStatus" editable="false" prefHeight="80.0" prefWidth="265.0" promptText="status" style="-fx-background-color: lightblue;" wrapText="true">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextArea>
+                  <Button mnemonicParsing="false" onAction="#barcodeAttendanceAbsentButton" prefHeight="61.0" prefWidth="180.0" style="-fx-background-color: lightblue;" text="Click Here to Absent the Rest of the Class" textAlignment="CENTER" textFill="#570707" underline="true" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+      </children>
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+    </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="265.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+         <children>
+            <Button defaultButton="true" layoutX="234.0" layoutY="11.0" minWidth="80.0" mnemonicParsing="false" onAction="#submitBarcodeAttendButton" text="Submit">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Photo" textFill="#610505" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="barcode in" textFill="#610505">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Name" textFill="#610505" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      
+      <TextArea fx:id="barcodeAttendName" editable="false" focusTraversable="false" prefHeight="51.0" prefWidth="400.0" promptText="name" style="-fx-background-color: aliceblue;" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+  <Button fx:id="returnAttendanceBCode" cancelButton="true" minWidth="80.0" mnemonicParsing="false" onAction="#handleButtonAction87" text="Return" textFill="#8d0b0b" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+  </Button>
+      <HBox alignment="CENTER" prefHeight="185.0" prefWidth="464.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <ImageView fx:id="barcodeAttendImageView" fitHeight="222.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="18.0" prefHeight="27.0" prefWidth="76.0" text="Id No" textFill="#610505" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <TextField fx:id="barcodeAttendIdNo" editable="false" prefHeight="39.0" prefWidth="259.0" promptText="id number" style="-fx-background-color: aliceblue;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <ComboBox fx:id="attendBarcodeClass" onMouseEntered="#attendanceBarcodeInit" prefHeight="38.0" prefWidth="176.0" promptText="select class">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="Infinity" minWidth="-Infinity" />
+  </columnConstraints>
+  <padding>
+    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+  </padding>
+  <rowConstraints>
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="49.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="49.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="49.0" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="Infinity" minHeight="-Infinity" prefHeight="222.0" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="226.0" minHeight="-Infinity" prefHeight="212.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="NEVER" />
+  </rowConstraints>
+</GridPane>

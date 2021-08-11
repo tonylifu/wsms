@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <top>
+      <TitledPane alignment="TOP_CENTER" animated="false" prefHeight="520.0" prefWidth="507.0" text="School Record Management System" textFill="#104337" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="200.0" style="-fx-background-color: lightgray;">
+               <children>
+                  <ImageView fitHeight="490.0" fitWidth="501.0" layoutX="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@school4.jpg" />
+                     </image>
+                  </ImageView>
+                  <MenuBar layoutX="3.0" layoutY="2.0" opacity="0.5" style="-fx-background-color: lightblue;">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="aboutMenuItemHomeLogout" mnemonicParsing="false" onAction="#logOutMenuHome" text="Logout" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="_Help">
+                        <items>
+                          <MenuItem fx:id="aboutMenuItemHomeClick" mnemonicParsing="false" onAction="#handleAboutMenuItemHome" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </MenuBar>
+                  <Button fx:id="aboutMenuItemHome" layoutX="426.0" layoutY="446.0" mnemonicParsing="false" onAction="#handleAboutMenuItemHome" text="aboutClick" visible="false" />
+                <Button fx:id="returnGenerateReportsButton" layoutX="211.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleButtonAction15" prefHeight="37.0" prefWidth="83.0" style="-fx-background-color: white;" text="Cancel" textFill="#430c0c">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="18.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="terminalClassResultBtn" layoutX="137.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleButtonAction16" prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: white;" text="Terminal Class Result" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="genAnnualClassSummary" layoutX="136.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleButtonAction17" prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: white;" text="Annual Class Summary" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="terminalSubjectClassResultBtn" layoutX="137.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleButtonAction18" prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: white;" text="Terminal Class Result - By Subject" textAlignment="CENTER" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="annualClassSummBySubjBtn" layoutX="137.0" layoutY="195.0" mnemonicParsing="false" onAction="#handleButtonAction19" prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: white;" text="Annual Class Summary - By Subject" textAlignment="CENTER" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="paymentHistRptBtn" layoutX="137.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleButtonAction20" prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: white;" text="Payments History - By Class" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="136.0" layoutY="278.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: white;" text="*****************************" textFill="#460909">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="studentListBtn" layoutX="137.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleButtonAction21" prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: white;" text="Students List" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="staffListBtn" layoutX="137.0" layoutY="357.0" mnemonicParsing="false" onAction="#handleButtonAction22" prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: white;" text="Staff List" textFill="#0f0c4d">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TitledPane>
+   </top>
+</BorderPane>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane gridLinesVisible="true" hgap="2.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#imageBrowseDetailsInit" prefHeight="500.0" prefWidth="550.0" vgap="2.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <children>
+    <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      <image>
+        <!-- place holder -->
+      </image>
+    </ImageView>
+    <VBox maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" prefWidth="400.0" spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <children>
+        <Label fx:id="messageLabel" text="Photo Upload" textAlignment="LEFT" wrapText="true">
+          <font>
+            <Font name="System Bold" size="13.0" />
+          </font>
+        </Label>
+        <Label fx:id="detailsLabel" text="File Location:" textAlignment="LEFT" wrapText="true">
+          <font>
+            <Font size="12.0" />
+          </font>
+        </Label>
+            <HBox prefHeight="28.0" prefWidth="400.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#imageUploadBrowseButton" prefHeight="25.0" prefWidth="101.0" text="Browse...">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="imageBrowseFP" editable="false" prefHeight="25.0" prefWidth="298.0" style="-fx-background-color: aliceblue;" />
+               </children>
+            </HBox>
+      </children>
+    </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="265.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+         <children>
+      <Button id="bevel-grey" minWidth="80.0" mnemonicParsing="false" onAction="#startWebCamButton" stylesheets="@application.css" text="Capture" textFill="#0a6116" HBox.hgrow="NEVER">
+        <HBox.margin>
+          <Insets left="14.0" />
+        </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+      </Button>
+            <Button id="bevel-grey" layoutX="394.0" layoutY="11.0" minWidth="80.0" mnemonicParsing="false" onAction="#viewPhotoButton2" stylesheets="@application.css" text="View" textFill="#23197c">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button id="bevel-grey" fx:id="updateBrowseBtn" layoutX="314.0" layoutY="11.0" minWidth="80.0" mnemonicParsing="false" onAction="#updateBrowseImageButton" stylesheets="@application.css" text="Update">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button id="bevel-grey" fx:id="deleteBrowseImageBtn" layoutX="289.0" layoutY="11.0" minWidth="80.0" mnemonicParsing="false" onAction="#deleteBrowseImageButton" stylesheets="@application.css" text="Delete">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button id="bevel-grey" layoutX="234.0" layoutY="11.0" minWidth="80.0" mnemonicParsing="false" onAction="#uploadBrowseImageButton" stylesheets="@application.css" text="Upload">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="45.0" prefWidth="410.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="223.0" text="Date" />
+            <DatePicker fx:id="imageBrowseDate" editable="false" prefHeight="31.0" prefWidth="176.0" promptText="upload date">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </HBox.margin></DatePicker>
+         </children>
+      </HBox>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Photo" textFill="#610505" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Id No" textFill="#610505">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Name" textFill="#610505" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="imageBrowseIdNo" promptText="id number" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="200.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="imageBrowseName" prefHeight="51.0" prefWidth="400.0" promptText="name" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+  <Button id="ipad-dark-grey" fx:id="returnEnterUploadPhotoBtn" cancelButton="true" minWidth="80.0" mnemonicParsing="false" onAction="#handleButtonAction31" stylesheets="@application.css" text="Cancel" textFill="#8d0b0b" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+  </Button>
+      <HBox prefHeight="185.0" prefWidth="464.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </MediaView>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="Infinity" minWidth="-Infinity" />
+  </columnConstraints>
+  <padding>
+    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+  </padding>
+  <rowConstraints>
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="54.0" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="Infinity" minHeight="-Infinity" prefHeight="98.0" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="223.0" minHeight="-Infinity" prefHeight="223.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="34.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+  </rowConstraints>
+</GridPane>

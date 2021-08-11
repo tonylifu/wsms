@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="printPane2_2" dividerPositions="0.2590529247910863" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="898.0">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="88.0" layoutX="49.0" layoutY="9.0" pickOnBounds="true">
+               <image>
+                  <Image url="@kusaki.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="1.0" prefHeight="39.0" prefWidth="601.0" style="-fx-background-color: red;" text="K U S A K I  C O L L E G E  Y A N D E V" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="42.0" prefHeight="21.0" prefWidth="601.0" style="-fx-background-color: black;" text="Discipline and devotion" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="62.0" prefHeight="21.0" prefWidth="601.0" text="P. O. Box 135, Gboko, Benue State" textFill="#ff0000dd">
+               <font>
+                  <Font name="Tahoma Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="163.0" layoutY="80.0" prefHeight="21.0" prefWidth="601.0" style="-fx-background-color: black;" text="SENIOR SECONDARY SCHOOL (SSS) TRANSCRIPT" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Banner Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="84.0" prefHeight="21.0" prefWidth="139.0" text="ACADEMIC RECORD">
+               <font>
+                  <Font name="Sitka Banner Bold" size="12.0" />
+               </font>
+            </Label>
+            <HBox layoutX="14.0" layoutY="104.0" prefHeight="3.0" prefWidth="820.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="43.0" text="Name:" />
+                  <Label fx:id="studentName_txtTF2" prefHeight="29.0" prefWidth="270.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="32.0" text="Sex:" />
+                  <Label fx:id="sexOfStudentTF2" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="32.0" text="Age:" />
+                  <Label fx:id="age_LBL2" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="38.0" text="Class:" />
+                  <Label fx:id="classOfStudentTF2" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="38.0" text="Term:" />
+                  <Label fx:id="term_LBL2" prefHeight="19.0" prefWidth="77.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="126.0" prefHeight="0.0" prefWidth="820.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="54.0" text="Session:" />
+                  <Label fx:id="session_LBL2" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="69.0" text="No in Class:" />
+                  <Label fx:id="classEnrolSizeTF2" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="132.0" text="No of days in the Term:" />
+                  <Label fx:id="noDaysTermSSS2" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="54.0" text="Present:" />
+                  <Label fx:id="noPresentsSSS2" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="47.0" text="Absent:" />
+                  <Label fx:id="noAbsentsSSS2" prefHeight="19.0" prefWidth="77.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="147.0" prefHeight="0.0" prefWidth="820.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="69.0" text="Total Score:" />
+                  <Label fx:id="totalScore_txtTF2" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="55.0" text="  Average:" />
+                  <Label fx:id="avgScoreTF2" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="98.0" text="  Overall Position:" />
+                  <Label fx:id="positionInClassTF2" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="27.0" prefWidth="54.0" text="  Out of:" />
+                  <Label fx:id="classSizeTF2" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: lightgray;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label prefHeight="25.0" prefWidth="41.0" text=" Id No:" />
+                  <TextField id="ladi" fx:id="studentNumberTF2" prefHeight="0.0" prefWidth="116.0" stylesheets="@application.css">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+            <ComboBox id="ladi" fx:id="yearOfResultTF2" layoutX="815.0" layoutY="81.0" onMouseEntered="#SSSinitialize6_2" prefHeight="30.0" prefWidth="81.0" promptText="Year" stylesheets="@application.css" />
+            <ComboBox id="ladi" fx:id="resultTermTF2" editable="true" layoutX="815.0" layoutY="112.0" onMouseEntered="#SSSinitialize6_2" prefHeight="30.0" prefWidth="81.0" promptText="Term" stylesheets="@application.css" />
+            <Button id="dark-blue" fx:id="generateStdResultsButton2" defaultButton="true" layoutX="829.0" layoutY="147.0" mnemonicParsing="false" onAction="#generateResultsActionButton2" prefHeight="25.0" prefWidth="66.0" stylesheets="@application.css" text="Spool" textFill="#110a2f" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imageViewSSSResult2" fitHeight="94.0" fitWidth="108.0" layoutX="769.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="scoresDataTable2" layoutX="14.0" layoutY="14.0" prefHeight="437.0" prefWidth="520.0" styleClass="scoresDataTable2" stylesheets="@application.css">
+              <columns>
+                <TableColumn fx:id="subjectsCol2" prefWidth="87.0" text="SUBJECT" />
+                <TableColumn fx:id="CA1Col2" prefWidth="33.0" text="ASS1" />
+                  <TableColumn fx:id="CA2Col2" prefWidth="36.0" text="ASS2" />
+                  <TableColumn fx:id="CA3Col2" prefWidth="38.0" text="ASS3" />
+                  <TableColumn fx:id="examCol2" prefWidth="38.0" text="Exam" />
+                  <TableColumn fx:id="totalCol2" prefWidth="34.0" text="Total" />
+                  <TableColumn fx:id="gradeCol2" prefWidth="37.0" text="Grade" />
+                  <TableColumn fx:id="positionCol2" prefWidth="46.0" text="Position" />
+                  <TableColumn fx:id="classAvgCol2" prefWidth="39.0" text="Class&#10;Avg" />
+                  <TableColumn fx:id="classHighestCol2" minWidth="0.0" prefWidth="44.0" text="Class&#10;Highest" />
+                  <TableColumn fx:id="classLowestCol2" prefWidth="35.0" text="Class&#10;Lowest" />
+                  <TableColumn fx:id="remarksCol2" prefWidth="52.0" text="Remark" />
+              </columns>
+            </TableView>
+            <HBox layoutX="14.0" layoutY="454.0" prefHeight="30.0" prefWidth="893.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="78.0" text="Form Master:" />
+                  <Label prefHeight="30.0" prefWidth="231.0" text="_____________________________________________" />
+                  <Label prefHeight="29.0" prefWidth="121.0" text="Comment/Signature:" />
+                  <Label prefHeight="30.0" prefWidth="461.0" text="__________________________________________________________________________________________" />
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="476.0" prefHeight="30.0" prefWidth="887.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="80.0" text="Principal:" />
+                  <Label prefHeight="30.0" prefWidth="231.0" text="_____________________________________________" />
+                  <Label prefHeight="29.0" prefWidth="126.0" text="Comment/Sign/Stamp:" />
+                  <Label prefHeight="30.0" prefWidth="451.0" text="__________________________________________________________________________________________" />
+               </children>
+            </HBox>
+            <Label layoutX="14.0" layoutY="508.0" prefHeight="19.0" prefWidth="121.0" text="Next Term Begins:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="132.0" layoutY="508.0" prefHeight="19.0" prefWidth="280.0" style="-fx-background-color: lightgray;">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button id="dark-blue" fx:id="returnResultSSSBtn2" cancelButton="true" layoutX="716.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleButtonAction80" prefHeight="28.0" prefWidth="81.0" stylesheets="@application.css" text="Cancel" textFill="#130f3c" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button id="dark-blue" fx:id="printJobResultButton2" layoutX="799.0" layoutY="492.0" mnemonicParsing="false" onAction="#printStdResultButton2" prefHeight="28.0" prefWidth="81.0" stylesheets="@application.css" text="Print" textFill="#130f3c">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="behaviourDataTable" layoutX="536.0" layoutY="14.0" prefHeight="437.0" prefWidth="177.0" styleClass="behaviourDataTable" stylesheets="@application.css">
+               <columns>
+                  <TableColumn fx:id="behaviourCol" prefWidth="115.0" styleClass="behaviourCol" text="B - BEHAVIOUR" />
+                  <TableColumn minWidth="5.0" prefWidth="12.0" styleClass="xyy" text="5" />
+                  <TableColumn prefWidth="12.0" text="4" />
+                  <TableColumn prefWidth="14.0" styleClass="xyx" text="3" />
+                  <TableColumn minWidth="8.0" prefWidth="11.0" text="2" />
+                  <TableColumn minWidth="5.0" prefWidth="11.0" styleClass="xyz" text="1" />
+               </columns>
+            </TableView>
+            <TableView fx:id="skillsDataTable" layoutX="714.0" layoutY="14.0" prefHeight="272.0" prefWidth="198.0" styleClass="skillsDataTable" stylesheets="@application.css">
+               <columns>
+                  <TableColumn fx:id="skillsCol" prefWidth="132.0" styleClass="skillsCol" text="C - SKILLS" />
+                  <TableColumn prefWidth="14.0" styleClass="x1" text="5" />
+                  <TableColumn prefWidth="15.0" text="4" />
+                  <TableColumn prefWidth="12.0" styleClass="x2" text="3" />
+                  <TableColumn minWidth="7.0" prefWidth="11.0" text="2" />
+                  <TableColumn minWidth="8.0" prefWidth="11.0" styleClass="x3" text="1" />
+               </columns>
+            </TableView>
+            <Label alignment="TOP_LEFT" layoutX="714.0" layoutY="296.0" prefHeight="153.0" prefWidth="198.0" text="KEYS TO RATING&#10;A - ACADEMIC&#10;70 - 100 = A Excellent&#10;60 - 69 = B Very Good&#10;50 - 59 = C Good&#10;40 - 49 = D Fair&#10;00 - 39 = E Fail&#10;&#10;B &amp; C - SKILLS AND BEHAVIOUR&#10;5 presents and excellent degree of observable traits&#10;4 maintains a high level of observable traits&#10;3 exhibits an acceptable level of acceptable traits&#10;2 shows minimal regard to observable traits&#10;1 has no regard for observable traits" textAlignment="JUSTIFY" textFill="#0a031e" wrapText="true">
+               <font>
+                  <Font size="7.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

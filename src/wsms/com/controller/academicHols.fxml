@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="322.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <TitledPane animated="false" prefHeight="700.0" prefWidth="750.0" text="Scores Entry" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox fillWidth="false" layoutX="-1.0" layoutY="-6.0" prefHeight="322.0" prefWidth="750.0">
+                     <children>
+                        <GridPane gridLinesVisible="true" prefHeight="300.0" prefWidth="750.0" style="-fx-background-color: #eeeaea;">
+                           <children>
+                              <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <items>
+                                    <Button defaultButton="true" mnemonicParsing="false" onAction="#calendarAcadHolsButton" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: lightcyan;" text="Save" textFill="DARKBLUE" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateCalendarHolsButton" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: lightcyan;" text="Update" textFill="DARKBLUE" underline="true">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#findCalendarHolsButton" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: lightcyan;" text="Find" textFill="DARKBLUE" underline="true">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </items>
+                              </ToolBar>
+                              <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="116.0" text="Year/Term " textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <items>
+                                    <Button fx:id="returnHolsTermBtn" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction84" prefHeight="40.0" prefWidth="71.0" text="Return" textFill="#080757">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#deleteCalendarHolsButton" prefHeight="42.0" prefWidth="90.0" style="-fx-background-color: lightcyan;" text="Delete" textFill="DARKBLUE" underline="true">
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </items>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </ToolBar>
+                              <TextField fx:id="acadHolDisp" editable="false" prefHeight="46.0" prefWidth="138.0" promptText="transaction information" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="120.0" text="Display " textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="56.0" text="Holiday Name" textAlignment="RIGHT" textFill="#5b1010" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="acadHolName" editable="true" onMouseEntered="#acadHolInit" prefHeight="48.0" prefWidth="223.0" promptText="holiday name" style="-fx-background-color: aliceblue;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <DatePicker fx:id="acadHolBegins" prefHeight="48.0" prefWidth="152.0" promptText="holiday begins">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                    <DatePicker fx:id="acadHolEnds" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="152.0" promptText="holiday ends" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="97.0" layoutY="85.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="75.0" text="Description" textFill="#5b1010">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="acadHolDesc" prefHeight="75.0" prefWidth="212.0" promptText="description" style="-fx-background-color: aliceblue;" wrapText="true">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </TextArea>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <Label alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="119.0" text="Holiday Begins / Ends " textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ComboBox fx:id="acadHolYear" onMouseEntered="#acadHolInit2" prefHeight="48.0" prefWidth="151.0" promptText="select a year">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <ComboBox fx:id="acadHolTerm" layoutX="10.0" layoutY="10.0" onMouseEntered="#acadHolInit" prefHeight="48.0" prefWidth="151.0" promptText="select a term">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="75.0" text="Find/HID" textFill="#5b1010">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="acadHolHID" onMouseEntered="#acadHolInit3" prefHeight="48.0" prefWidth="206.0" promptText="search" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="75.0" text="Type of Holiday" textAlignment="RIGHT" textFill="#5b1010" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="acadHolType" onMouseEntered="#acadHolInit" prefHeight="48.0" prefWidth="206.0" promptText="holiday type">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="121.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="331.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="298.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </center>
+</BorderPane>

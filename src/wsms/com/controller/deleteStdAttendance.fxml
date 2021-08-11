@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <tabs>
+    <Tab text="Delete All Attendance">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="1.0" layoutY="2.0" prefHeight="369.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: lightgreen;">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Student No" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField prefHeight="43.0" prefWidth="189.0" promptText="std no" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Std Name" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField editable="false" prefHeight="43.0" prefWidth="494.0" promptText="std no" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="186.0" prefWidth="600.0">
+                           <children>
+                              <Label prefHeight="106.0" prefWidth="595.0" text="Please be sure to backup your database before deleting any entity as this process is completely irreversible without a proper backup. " textAlignment="JUSTIFY" textFill="#390808" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                          <items>
+                            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="101.0" text="Delete" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="returnDelAttBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction88" prefHeight="32.0" prefWidth="101.0" text="RETURN" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                          </items>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Delete Annual Attendance">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="1.0" layoutY="2.0" prefHeight="369.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="79.0" prefWidth="600.0" style="-fx-background-color: orange;">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Student No" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField prefHeight="43.0" prefWidth="189.0" promptText="std no" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Std Name" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField editable="false" prefHeight="43.0" prefWidth="494.0" promptText="std name" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Session" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox prefHeight="40.0" prefWidth="150.0" promptText="session">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="135.0" prefWidth="600.0">
+                           <children>
+                              <Label prefHeight="106.0" prefWidth="595.0" text="Please be sure to backup your database before deleting any entity as this process is completely irreversible without a proper backup. " textAlignment="JUSTIFY" textFill="#390808" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                           <items>
+                              <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="101.0" text="Delete" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="returnDelAttYearBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction88" prefHeight="32.0" prefWidth="101.0" text="RETURN" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Delete Terminal Attendance">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="1.0" layoutY="2.0" prefHeight="369.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="76.0" prefWidth="600.0" style="-fx-background-color: lightblue;">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Student No" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField prefHeight="43.0" prefWidth="189.0" promptText="std no" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Std Name" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField editable="false" prefHeight="43.0" prefWidth="494.0" promptText="std name" style="-fx-background-color: aliceblue;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="88.0" text="Session" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox prefHeight="40.0" prefWidth="150.0" promptText="session">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="88.0" text="Session" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox layoutX="103.0" layoutY="18.0" prefHeight="40.0" prefWidth="150.0" promptText="term">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="139.0" prefWidth="600.0">
+                           <children>
+                              <Label prefHeight="118.0" prefWidth="595.0" text="Please be sure to backup your database before deleting any entity as this process is completely irreversible without a proper backup. " textAlignment="JUSTIFY" textFill="#390808" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                           <items>
+                              <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="101.0" text="Delete" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="returnDelAttTermBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleButtonAction88" prefHeight="32.0" prefWidth="101.0" text="RETURN" textFill="#221107">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

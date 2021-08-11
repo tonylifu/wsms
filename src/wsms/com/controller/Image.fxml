@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="608.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <TitledPane animated="false" prefHeight="616.0" prefWidth="771.0" text="Payment Entry" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="558.0" prefWidth="769.0">
+               <children>
+                  <GridPane gridLinesVisible="true" layoutY="1.0" prefHeight="557.0" prefWidth="771.0" style="-fx-background-color: lightgray;">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="ID No" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="imageStdNameTF" editable="false" onMouseExited="#init" prefHeight="50.0" prefWidth="289.0" promptText="Student Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: skyblue;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <items>
+                              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="82.0" text="Cancel" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="86.0" text="Validate" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#saveImageButton" prefHeight="40.0" prefWidth="100.0" text="Save" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Student Name" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="imageDateTF" prefHeight="44.0" prefWidth="193.0" promptText="Date" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="105.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <Label alignment="CENTER_RIGHT" prefHeight="79.0" prefWidth="69.0" text="Txn Date" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="ID No">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <HBox prefHeight="186.0" prefWidth="365.0">
+                                 <children>
+                                    <ImageView fx:id="imageView" fitHeight="187.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="visibility: true;">
+                                       <HBox.margin>
+                                          <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                       </HBox.margin>
+                                       <viewport>
+                                          <Rectangle2D height="187.0" width="200.0" />
+                                       </viewport>
+                                       <effect>
+                                          <ImageInput />
+                                       </effect></ImageView>
+                                    <Button mnemonicParsing="false" onAction="#browseImageButton" prefHeight="22.0" prefWidth="112.0" text="Browse Image">
+                                       <HBox.margin>
+                                          <Insets top="75.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="imageStdNoTF" prefHeight="40.0" prefWidth="325.0" promptText="Enter Student IDNo" style="-fx-background-color: lightblue;" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="15.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="127.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.0" minWidth="10.0" prefWidth="284.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="360.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </center>
+</BorderPane>

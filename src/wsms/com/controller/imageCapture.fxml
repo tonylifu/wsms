@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <left>
+      <VBox prefHeight="461.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="473.0" text="Student Information Central" textFill="#166582">
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Button id="windows7-default" fx:id="enterAdmissionBtn" mnemonicParsing="false" onAction="#handleButtonAction101" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Admission">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="createNewStudentButton" mnemonicParsing="false" onAction="#handleButtonAction" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Create Student">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="findStudentButton" mnemonicParsing="false" onAction="#handleButtonAction2" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Update Student">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterConcessionBtn" mnemonicParsing="false" onAction="#handleButtonAction92" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Concession">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterBarcodeEnqBtn" mnemonicParsing="false" onAction="#handleButtonAction63" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Barcode">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterBiometricBtn" mnemonicParsing="false" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Biometric">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterUploadPhotoBtn" mnemonicParsing="false" onAction="#handleButtonAction31" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Image Capture">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterDiscRecBtn" mnemonicParsing="false" onAction="#handleButtonAction56" onMousePressed="#defineStdInfoAccessButton" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Student Affairs">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="39.0" prefWidth="725.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutY="11.0" prefHeight="17.0" prefWidth="3000.0" text="© 2019 Webstartrek Ltd" textFill="#166582">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="481.0" prefWidth="467.0" style="-fx-background-color: aliceblue;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="491.0" prefWidth="864.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="473.0" text="Image Capture" textFill="#166582">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TabPane maxHeight="900.0" prefHeight="700.0" prefWidth="860.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Upload Photo">
+                        <content>
+                              <VBox alignment="TOP_CENTER" onMouseMoved="#imageBrowseDetailsInit" prefHeight="515.0" prefWidth="716.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="110.0" text="Barcode Scanning">
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <GridPane gridLinesVisible="true" onMouseMoved="#imageBrowseDetailsInit" prefHeight="98.0" prefWidth="850.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Student ID" textFill="#166582" GridPane.halignment="RIGHT">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="17.0" text="Student Name" textFill="#166582" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="38.0" layoutY="17.0" text="Browse" textFill="#166582" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Date" textFill="#166582" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField id="ladi" fx:id="imageBrowseIdNo" promptText="id number" stylesheets="@application.css" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <TextArea id="ladi" fx:id="imageBrowseName" promptText="name" stylesheets="@application.css" wrapText="true" GridPane.columnIndex="3">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </TextArea>
+                                          <DatePicker id="ladi" fx:id="imageBrowseDate" editable="false" prefHeight="31.0" prefWidth="176.0" promptText="upload date" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </DatePicker>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <children>
+                                                <Button id="dark-blue" mnemonicParsing="false" onAction="#imageUploadBrowseButton" prefHeight="29.0" prefWidth="129.0" stylesheets="@application.css" text="Browse...">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <TextField id="ladi" fx:id="imageBrowseFP" editable="false" prefHeight="25.0" prefWidth="155.0" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </GridPane>
+                                    <ImageView fx:id="imageView" fitHeight="297.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </VBox.margin></ImageView>
+                                    <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                                       <items>
+                                          <Button id="dark-blue" defaultButton="true" mnemonicParsing="false" onAction="#uploadBrowseImageButton" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="UPLOAD" />
+                                          <Button id="dark-blue" fx:id="updateBrowseBtn" defaultButton="true" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#updateBrowseImageButton" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="UPDATE" />
+                                          <Button id="dark-blue" defaultButton="true" layoutX="264.0" layoutY="12.0" mnemonicParsing="false" onAction="#viewPhotoButton2" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="VIEW" />
+                                          <Button id="dark-blue" fx:id="deleteBrowseImageBtn" defaultButton="true" layoutX="518.0" layoutY="12.0" mnemonicParsing="false" onAction="#deleteBrowseImageButton" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="DELETE" />
+                                          <Button id="dark-blue" defaultButton="true" layoutX="137.0" layoutY="12.0" mnemonicParsing="false" onAction="#startWebCamButton" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="CAPTURE" />
+                                          <Button id="dark-blue" fx:id="returnCreateButton" cancelButton="true" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="RETURN" />
+                                       </items>
+                                       <VBox.margin>
+                                          <Insets top="47.0" />
+                                       </VBox.margin>
+                                    </ToolBar>
+                                 </children>
+                              </VBox>
+                        </content>
+                      </Tab>
+                      <Tab text="Students Without Photo">
+                           <content>
+                              <VBox fx:id="printPaneStdList2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="865.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="21.0" prefWidth="950.0" style="-fx-background-color: black;" text="Student Without Photo" textFill="WHITE">
+                                       <font>
+                                          <Font name="Sitka Banner Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="800.0">
+                                       <children>
+                                          <TextField id="ladi" fx:id="errorStdList_TF2" editable="false" prefHeight="25.0" prefWidth="679.0" stylesheets="@application.css">
+                                             <HBox.margin>
+                                                <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button id="dark-blue" fx:id="spoolStudentListBtn2" defaultButton="true" mnemonicParsing="false" onAction="#spoolStudentListButton2" prefHeight="25.0" prefWidth="142.0" stylesheets="@application.css" text="Spool Student List" textFill="#10034a">
+                                             <font>
+                                                <Font name="System Bold Italic" size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="spoolStdListDataTable2" prefHeight="410.0" prefWidth="855.0" style="-fx-background-color: aliceblue;">
+                                       <columns>
+                                          <TableColumn fx:id="stdListSNoCol2" prefWidth="38.0" text="S/No" />
+                                          <TableColumn fx:id="stdListStdIDCol2" text="Student ID" />
+                                          <TableColumn fx:id="stdListNameCol2" prefWidth="156.0" text="Names" />
+                                          <TableColumn fx:id="stdListSexCol2" prefWidth="69.0" text="Sex" />
+                                          <TableColumn fx:id="stdListAgeCol2" minWidth="0.0" prefWidth="60.0" text="Age" />
+                                          <TableColumn fx:id="stdListClassCol2" prefWidth="62.0" text="Class" />
+                                          <TableColumn fx:id="stdListParentsCol2" prefWidth="134.0" text="Parents/Guardians" />
+                                          <TableColumn fx:id="stdListPhoneCol2" prefWidth="119.0" text="Phone Numbers" />
+                                          <TableColumn fx:id="stdListEmailCol2" prefWidth="140.0" text="Email" />
+                                       </columns>
+                                    </TableView>
+                                    <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="890.0">
+                                       <children>
+                                          <ToolBar prefHeight="36.0" prefWidth="319.0">
+                                             <items>
+                                                <Button id="dark-blue" fx:id="printStdListBtn2" mnemonicParsing="false" onAction="#printStdListButton2" prefHeight="25.0" prefWidth="90.0" stylesheets="@application.css" text="PRINT" textFill="#240951">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button id="dark-blue" fx:id="genExcelSpoolStdListBtn2" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#genExcelStdListButton2" prefHeight="25.0" prefWidth="90.0" stylesheets="@application.css" text="EXCEL" textFill="#240951">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button id="dark-blue" fx:id="returnCreateButton" cancelButton="true" layoutX="104.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="90.0" stylesheets="@application.css" text="RETURN" textFill="#240951">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                             </items>
+                                          </ToolBar>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                      </Tab>
+                        <Tab text="Enquiry">
+                           <content>
+                              <VBox alignment="TOP_CENTER" onMouseMoved="#imageViewDetailsInit" prefHeight="473.0" prefWidth="860.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="110.0" text="Barcode Scanning">
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <GridPane gridLinesVisible="true" onMouseMoved="#imageViewDetailsInit" prefHeight="143.0" prefWidth="850.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Student ID" textFill="#166582" GridPane.halignment="RIGHT">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="40.0" layoutY="17.0" text="Name" textFill="#166582" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Sex" textFill="#166582">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="1.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField id="ladi" fx:id="imageViewSex" editable="false" prefHeight="25.0" prefWidth="80.0" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets left="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Age" textFill="#166582">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="1.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField id="ladi" fx:id="imageViewAge" editable="false" prefHeight="25.0" prefWidth="120.0" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets bottom="1.0" top="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="10.0" layoutY="17.0" text="Class" textFill="#166582">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField id="ladi" fx:id="imageViewClass" editable="false" layoutX="32.0" layoutY="13.0" prefHeight="25.0" prefWidth="120.0" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets bottom="1.0" top="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Year" textFill="#166582">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="1.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField id="ladi" fx:id="imageViewYear" editable="false" prefHeight="25.0" prefWidth="120.0" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets bottom="1.0" top="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="10.0" layoutY="17.0" text="Term" textFill="#166582">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="1.0" right="1.0" />
+                                                   </padding>
+                                                </Label>
+                                                <TextField id="ladi" fx:id="imageViewTerm" editable="false" layoutX="32.0" layoutY="13.0" prefHeight="25.0" prefWidth="120.0" stylesheets="@application.css">
+                                                   <HBox.margin>
+                                                      <Insets bottom="1.0" top="1.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </HBox>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Outstanding Balance" textFill="#166582" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField id="ladi" fx:id="imageViewBalance" editable="false" layoutX="557.0" layoutY="13.0" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="94.0" layoutY="47.0" text="Status" textFill="#166582" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="2.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextArea id="ladi" fx:id="imageViewStatus" editable="false" prefHeight="200.0" prefWidth="200.0" stylesheets="@application.css" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextArea>
+                                          <TextField id="ladi" fx:id="imageViewIdNo" promptText="id number" stylesheets="@application.css" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <TextArea id="ladi" fx:id="imageViewName" editable="false" focusTraversable="false" promptText="name" style="-fx-background-color: aliceblue;" stylesheets="@application.css" wrapText="true" GridPane.columnIndex="3">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                          </TextArea>
+                                       </children>
+                                    </GridPane>
+                                    <HBox prefHeight="327.0" prefWidth="860.0">
+                                       <children>
+                                          <ImageView fx:id="imageView2" fitHeight="297.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="150.0" right="10.0" top="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Button id="dark-blue" minWidth="80.0" mnemonicParsing="false" onAction="#downloadPhotoButton" prefHeight="36.0" prefWidth="122.0" stylesheets="@application.css" text="Download Photo" textFill="#0a6116">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="120.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="7.0" prefWidth="864.0">
+                                       <items>
+                                          <Button id="dark-blue" defaultButton="true" mnemonicParsing="false" onAction="#submitStdDetailsReqButton" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="SUBMIT" />
+                                          <Button id="dark-blue" fx:id="returnCreateButton1" cancelButton="true" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="RETURN" />
+                                       </items>
+                                    </ToolBar>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                        <Tab text="Student Photo ID">
+                           <content>
+                              <VBox fx:id="barcodePane" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="860.0">
+                                 <children>
+                                    <HBox prefHeight="600.0" prefWidth="860.0">
+                                       <children>
+                                          <GridPane fx:id="photoIdPane" alignment="CENTER" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="400.0" style="-fx-background-color: white;">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="89.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="466.0" minWidth="10.0" prefWidth="331.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="284.0" minHeight="10.0" prefHeight="263.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="166.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <ImageView fitHeight="67.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                   <image>
+                                                      <Image url="@kusaki.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="37.0" prefWidth="582.0" style="-fx-background-color: red;" text="KUSAKI COLLEGE YANDEV" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial Black" size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="21.0" prefWidth="582.0" style="-fx-background-color: black;" text="Discipline and devotion" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Sitka Banner Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="23.0" prefWidth="582.0" text="P. O. Box 135, Gboko, Benue State" textFill="#ff0000dd">
+                                                         <font>
+                                                            <Font name="Tahoma Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Student ID" textFill="#610505" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font name="System Bold" size="10.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField id="ladi" fx:id="photoIdViewIdNo" prefHeight="39.0" prefWidth="353.0" promptText="id number" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label alignment="CENTER_RIGHT" layoutX="29.0" layoutY="114.0" prefHeight="27.0" prefWidth="95.0" text="Student Name" textFill="#610505" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="10.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField id="ladi" fx:id="photoIdViewName" editable="false" layoutX="112.0" layoutY="113.0" prefHeight="39.0" prefWidth="353.0" promptText="name" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label prefHeight="364.0" prefWidth="151.0" text="This is the property of Kusaki College Yandev. If found, please return to the above address." textAlignment="JUSTIFY" textFill="#610505" wrapText="true" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font name="Arial Narrow Italic" size="10.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <ImageView fx:id="imageView2PhotoId" fitHeight="250.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </GridPane.margin>
+                                                </ImageView>
+                                                <ImageView fx:id="imageView2PhotoId2" fitHeight="42.0" fitWidth="222.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="2.0" left="1.0" right="2.0" top="2.0" />
+                                             </HBox.margin>
+                                          </GridPane>
+                                          <ToolBar nodeOrientation="RIGHT_TO_LEFT" orientation="VERTICAL" prefHeight="515.0" prefWidth="145.0">
+                                             <items>
+                                                <Button id="dark-blue" fx:id="photoIdCardBtn" defaultButton="true" mnemonicParsing="false" onAction="#photoIdCardButton" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="SUBMIT" />
+                                                <Button id="dark-blue" fx:id="printPhotoIdCardBtn" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#printPhotoIdCardButton" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="PRINT" />
+                                                <Button id="dark-blue" fx:id="returnCreateButton2" cancelButton="true" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="123.0" stylesheets="@application.css" text="RETURN" />
+                                             </items>
+                                             <HBox.margin>
+                                                <Insets left="50.0" top="350.0" />
+                                             </HBox.margin>
+                                          </ToolBar>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                    </tabs>
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                  </TabPane>
+               </children>
+            </VBox>
+         </children></VBox>
+   </center>
+   <top>
+      <VBox prefHeight="46.0" prefWidth="725.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="40.0" prefWidth="725.0">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@webstartreklogo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="44.0" prefWidth="3000.0" style="-fx-background-color: #166582;">
+                    <items>
+                      <Button id="windows7-default" fx:id="logOffHomeButton" mnemonicParsing="false" onAction="#quitPlatformButton" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Log Out" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="About" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Help" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@help.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="windows7-default" fx:id="returnStdCreateHome" layoutX="126.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleButtonAction93" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Home" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                    </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+</BorderPane>

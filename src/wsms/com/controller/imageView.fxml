@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane gridLinesVisible="true" hgap="2.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#imageViewDetailsInit" prefHeight="600.0" prefWidth="550.0" vgap="2.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+  <children>
+    <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+      <image>
+        <!-- place holder -->
+      </image>
+    </ImageView>
+    <TextField fx:id="imageViewIdNo" promptText="id number" style="-fx-background-color: lightblue;" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="200.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+    <VBox maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" prefWidth="400.0" spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <children>
+            <HBox prefHeight="28.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="29.0" text="Sex">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="imageViewSex" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="129.0" promptText="sex" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></TextField>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="38.0" text="Age">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="imageViewAge" editable="false" focusTraversable="false" layoutX="32.0" layoutY="10.0" prefHeight="25.0" prefWidth="111.0" promptText="age" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="150.0" layoutY="10.0" prefHeight="30.0" prefWidth="38.0" text="Class">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="imageViewClass" editable="false" focusTraversable="false" layoutX="188.0" layoutY="10.0" prefHeight="25.0" prefWidth="111.0" promptText="class" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="28.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="55.0" text="Session">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="imageViewYear" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="82.0" promptText="year" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="38.0" text="Term">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="imageViewTerm" editable="false" focusTraversable="false" layoutX="32.0" layoutY="10.0" prefHeight="30.0" prefWidth="67.0" promptText="term" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="28.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="138.0" text="OutStanding Balance">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="imageViewBalance" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="139.0" promptText="fee balance" style="-fx-background-color: lightgreen;">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <TextArea fx:id="imageViewStatus" editable="false" prefHeight="86.0" prefWidth="454.0" promptText="status" style="-fx-background-color: lightblue;" wrapText="true">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </TextArea>
+      </children>
+         <GridPane.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </GridPane.margin>
+    </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="265.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+         <children>
+            <Button layoutX="234.0" layoutY="11.0" minWidth="80.0" mnemonicParsing="false" onAction="#submitStdDetailsReqButton" text="Submit">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Photo" textFill="#610505" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Id No" textFill="#610505">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Name" textFill="#610505" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      
+      <TextArea fx:id="imageViewName" editable="false" focusTraversable="false" prefHeight="51.0" prefWidth="400.0" promptText="name" style="-fx-background-color: aliceblue;" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+  <Button fx:id="returnEnterEnqViewBtn" cancelButton="true" minWidth="80.0" mnemonicParsing="false" onAction="#handleButtonAction32" text="Return" textFill="#8d0b0b" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+  </Button>
+      <HBox prefHeight="185.0" prefWidth="464.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <ImageView fx:id="imageView2" fitHeight="222.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true" />
+      <Button minWidth="80.0" mnemonicParsing="false" onAction="#downloadPhotoButton" prefHeight="36.0" prefWidth="122.0" text="Download Photo" textFill="#0a6116" HBox.hgrow="NEVER">
+        <HBox.margin>
+          <Insets left="14.0" top="100.0" />
+        </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+      </Button>
+         </children>
+      </HBox>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="Infinity" minWidth="-Infinity" />
+  </columnConstraints>
+  <padding>
+    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+  </padding>
+  <rowConstraints>
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="49.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="Infinity" minHeight="10.0" prefHeight="49.0" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="Infinity" minHeight="-Infinity" prefHeight="222.0" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="226.0" minHeight="-Infinity" prefHeight="226.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+  </rowConstraints>
+</GridPane>

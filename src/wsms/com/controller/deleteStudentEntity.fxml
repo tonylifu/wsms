@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane onMouseMoved="#initDelete" prefHeight="416.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="152.0">
+               <children>
+                  <GridPane id="gridpane" gridLinesVisible="true" layoutX="-3.0" onMouseMoved="#initDelete" prefHeight="200.0" prefWidth="545.0" style="-fx-background-color: orange;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="102.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="443.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="76.0" prefWidth="115.0" text="Student No">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="121.0" text="SurName" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="61.0" prefWidth="117.0" text="Other Names" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="20.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="studentId" prefHeight="38.0" prefWidth="443.0" promptText="stdNo" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="200.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField id="sur_name" fx:id="studentSurNameTF" editable="false" prefHeight="38.0" prefWidth="443.0" promptText="surname" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="100.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField id="other_names" fx:id="studentOtherNamesTF" editable="false" prefHeight="38.0" prefWidth="443.0" promptText="othernames" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="543.0" style="-fx-background-color: gray;">
+               <children>
+                  <ToolBar layoutX="6.0" layoutY="14.0" prefHeight="48.0" prefWidth="513.0">
+                    <items>
+                      <Button fx:id="returnDeleteStdButton" cancelButton="true" mnemonicParsing="false" onAction="#handleButtonAction74" prefHeight="47.0" prefWidth="117.0" text="Return">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#ValidateStudent" prefHeight="47.0" prefWidth="117.0" text="Validate">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button disable="true" layoutX="108.0" layoutY="11.0" mnemonicParsing="false" onAction="#deleteStdScoresButton" prefHeight="47.0" prefWidth="117.0" text="Delete Std Scores">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#DeleteButton" onMouseMoved="#initDelete" prefHeight="47.0" prefWidth="117.0" text="Delete Student">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <Label layoutX="6.0" layoutY="74.0" prefHeight="113.0" prefWidth="530.0" text="Please do backup your database before deleting any entity. Deleted entities are not recoverable without backup." textAlignment="JUSTIFY" textFill="#bf1212" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

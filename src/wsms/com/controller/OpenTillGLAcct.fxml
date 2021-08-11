@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="428.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <center>
+      <TitledPane animated="false" prefHeight="616.0" prefWidth="771.0" text="Till Creation" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="558.0" prefWidth="769.0">
+               <children>
+                  <GridPane gridLinesVisible="true" layoutY="1.0" prefHeight="400.0" prefWidth="770.0" style="-fx-background-color: lightgray;">
+                     <children>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: skyblue;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <items>
+                              <Button fx:id="returnEnterOpenTillGLBtn" mnemonicParsing="false" onAction="#handleButtonAction42" prefHeight="40.0" prefWidth="61.0" text="Return" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#deleteTillGLButton" prefHeight="40.0" prefWidth="65.0" text="Delete" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#findTillGLAcctButton" prefHeight="40.0" prefWidth="50.0" text="Find" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#updateTillGLButton" prefHeight="40.0" prefWidth="65.0" text="Update" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#createTillGLAcctButton" prefHeight="40.0" prefWidth="78.0" text="Submit" textFill="#080757">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Till User" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="tillGLTxnDate" prefHeight="44.0" prefWidth="193.0" promptText="Transaction Date" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="105.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <Label alignment="CENTER_RIGHT" prefHeight="79.0" prefWidth="69.0" text="Txn Date" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Till/GL Acct No">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="118.0" text="Till/GL Acct Name">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="35.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="tillGLAcctName" prefHeight="40.0" prefWidth="325.0" promptText="Till /GL Account's Name" style="-fx-background-color: lightblue;">
+                                 <HBox.margin>
+                                    <Insets top="35.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <ComboBox fx:id="tillGLAcctNo" editable="true" onMouseEntered="#initializeTillGLCombo" prefHeight="46.0" prefWidth="246.0" promptText="Till/GL Accounts" style="-fx-background-color: lightblue;" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin></ComboBox>
+                        <ComboBox fx:id="tillUser" onMouseEntered="#initializeTillGLCombo" prefHeight="46.0" prefWidth="182.0" promptText="select option" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="281.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Acct Classification">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="28.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="tillGLAcctClass" onMouseEntered="#initializeTillGLCombo" prefHeight="46.0" prefWidth="182.0" promptText="select option">
+                                       <HBox.margin>
+                                          <Insets top="28.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="281.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="133.0" text="Category">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="28.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ComboBox fx:id="tillGLAcctCategory" onMouseEntered="#initializeTillGLCombo" prefHeight="46.0" prefWidth="182.0" promptText="select option">
+                                 <HBox.margin>
+                                    <Insets top="28.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="127.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.0" minWidth="10.0" prefWidth="284.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="360.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </center>
+</BorderPane>

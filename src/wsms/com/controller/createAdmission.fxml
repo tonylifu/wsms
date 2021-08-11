@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wsms.com.controller.OmniLoginControl">
+   <left>
+      <VBox prefHeight="461.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="473.0" text="Create Admission" textFill="#166582">
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <Button id="windows7-default" fx:id="enterCreateAdmissionBtn" mnemonicParsing="false" onAction="#handleButtonAction103" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Create Admission">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterAdmissionForm" mnemonicParsing="false" onAction="#handleButtonAction102" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Admission Form">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="enterAdmissionList" mnemonicParsing="false" onAction="#handleButtonAction104" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css" text="Admission List">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" mnemonicParsing="false" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" mnemonicParsing="false" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" mnemonicParsing="false" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" mnemonicParsing="false" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="windows7-default" fx:id="returnAdmissionBtn" mnemonicParsing="false" onAction="#handleButtonAction101" prefHeight="100.0" prefWidth="488.0" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@return.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="39.0" prefWidth="725.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutY="11.0" prefHeight="17.0" prefWidth="3000.0" text="© 2019 Webstartrek Ltd" textFill="#166582">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="481.0" prefWidth="467.0" style="-fx-background-color: aliceblue;" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="450.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="113.0" text="Reg Form No" textFill="#166582" wrapText="true" GridPane.halignment="RIGHT">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="12.0" prefHeight="32.0" prefWidth="113.0" text="Session/Term" textFill="#166582" wrapText="true" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="12.0" prefHeight="32.0" prefWidth="113.0" text="Surname" textFill="#166582" wrapText="true" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="40.0" prefHeight="32.0" prefWidth="113.0" text="Other Names" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <children>
+                        <ComboBox id="ladi" fx:id="admSession" onMouseEntered="#admInitialize2" prefWidth="600.0" promptText="session" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox id="ladi" fx:id="admTerm" onMouseEntered="#admInitialize" prefWidth="600.0" promptText="term" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <TextField id="ladi" fx:id="admSurName" promptText="surname" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField id="ladi" fx:id="admOtherNames" promptText="othernames" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="42.0" prefHeight="32.0" prefWidth="113.0" text="DOB/Sex" textFill="#166582" wrapText="true" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="70.0" prefHeight="32.0" prefWidth="113.0" text="Place of Birth" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="70.0" prefHeight="32.0" prefWidth="113.0" text="Nationality" textFill="#166582" wrapText="true" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="100.0" prefHeight="32.0" prefWidth="113.0" text="State/LGA" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <children>
+                        <DatePicker id="ladi" fx:id="admDOB" prefWidth="600.0" promptText="DOB" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <ComboBox id="ladi" fx:id="admSex" onMouseEntered="#admInitialize" prefWidth="600.0" promptText="sex" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <TextField id="ladi" fx:id="admPlaceOfBirth" promptText="place of birth" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <ComboBox id="ladi" fx:id="admNationality" onMouseEntered="#admInitCountries" prefWidth="1000.0" promptText="nationality" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <children>
+                        <ComboBox id="ladi" fx:id="admState" onMouseEntered="#admInitStates" prefWidth="400.0" promptText="state" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox id="ladi" fx:id="admLGA" onMouseEntered="#admInitLGAs" prefWidth="400.0" promptText="LGA" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField id="ladi" fx:id="admVillage" prefWidth="400.0" promptText="village" stylesheets="@application.css" />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="102.0" prefHeight="32.0" prefWidth="113.0" text="Address" textFill="#166582" wrapText="true" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="130.0" prefHeight="32.0" prefWidth="113.0" text="Father" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="130.0" prefHeight="32.0" prefWidth="113.0" text="Mother" textFill="#166582" wrapText="true" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="160.0" prefHeight="32.0" prefWidth="113.0" text="Guardian" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextArea id="ladi" fx:id="admAddress" prefHeight="200.0" prefWidth="200.0" promptText="address" stylesheets="@application.css" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </TextArea>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <children>
+                        <TextField id="ladi" fx:id="admFatherName" promptText="name" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admFatherPhone" promptText="phone" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admFatherOccupation" promptText="occupation" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admFatherReligion" promptText="religion" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <TextField id="ladi" fx:id="admMotherName" prefWidth="300.0" promptText="name" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admMotherPhone" prefWidth="300.0" promptText="phone" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admMotherOccupation" prefWidth="300.0" promptText="occupation" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admMotherReligion" prefWidth="300.0" promptText="religion" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <children>
+                        <TextField id="ladi" fx:id="admGuardianName" promptText="name" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admGuardianPhone" promptText="phone" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admGuardianOccupation" promptText="occupation" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admGuardianReligion" promptText="religion" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="162.0" prefHeight="32.0" prefWidth="113.0" text="Email" textFill="#166582" wrapText="true" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="190.0" prefHeight="32.0" prefWidth="113.0" text="Prev Schl/Yrs" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="190.0" prefHeight="32.0" prefWidth="113.0" text="Last/Seeking Cl" textFill="#166582" wrapText="true" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="222.0" prefHeight="32.0" prefWidth="113.0" text="Class Offered" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <children>
+                        <TextField id="ladi" fx:id="admPrevSchool" prefWidth="300.0" promptText="previous school attended" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admYearsAtPrevSchl" layoutX="11.0" layoutY="10.0" prefWidth="300.0" promptText="years at previous school" stylesheets="@application.css" text="0" />
+                     </children>
+                  </HBox>
+                  <TextField id="ladi" fx:id="admEmail" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <ComboBox id="ladi" fx:id="admClassOffered" layoutX="112.0" layoutY="223.0" onMouseEntered="#admInitStdClass" prefWidth="600.0" promptText="class offered" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="222.0" prefHeight="32.0" prefWidth="113.0" text="ON/OFF Campus" textFill="#166582" wrapText="true" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="250.0" prefHeight="32.0" prefWidth="113.0" text="Fee Policy" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="252.0" prefHeight="32.0" prefWidth="113.0" text="Adm Status" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="322.0" layoutY="252.0" prefHeight="32.0" prefWidth="113.0" text="Exam/Interview" textFill="#166582" wrapText="true" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox id="ladi" fx:id="admOnOffCampus" layoutX="112.0" layoutY="223.0" onMouseEntered="#admInitialize" prefWidth="1000.0" promptText="Boarder/Day" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="282.0" prefHeight="32.0" prefWidth="113.0" text="Date" textFill="#166582" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox id="ladi" fx:id="admFeePolicy" layoutX="422.0" layoutY="223.0" onMouseEntered="#admInitialize" prefWidth="600.0" promptText="accept to pay fee within 14 days ?" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <DatePicker id="ladi" fx:id="admDate" prefWidth="600.0" promptText="date of Admission" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="600.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <children>
+                        <TextField id="ladi" fx:id="admRegFormNo" prefWidth="300.0" promptText="Form No" stylesheets="@application.css" text="0">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admRegFee" prefWidth="300.0" promptText="Reg Fee" stylesheets="@application.css" text="1000.0">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <children>
+                        <ComboBox id="ladi" fx:id="admLastClass" onMouseEntered="#admInitialize" prefWidth="600.0" promptText="last class" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox id="ladi" fx:id="admClassSeeking" onMouseEntered="#admInitialize" prefWidth="600.0" promptText="class seeking" stylesheets="@application.css">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                     <children>
+                        <TextField id="ladi" fx:id="admExamScores" prefWidth="600.0" promptText="exam scores" stylesheets="@application.css" text="0.0">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField id="ladi" fx:id="admInterviewScores" layoutX="10.0" layoutY="10.0" prefWidth="600.0" promptText="interview scores" stylesheets="@application.css" text="0.0">
+                           <HBox.margin>
+                              <Insets left="1.0" right="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <ComboBox id="ladi" fx:id="admAdmissionStatus" onMouseEntered="#admInitialize" prefWidth="600.0" promptText="admission status" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </GridPane>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="1500.0">
+                     <items>
+                        <Button id="dark-blue" fx:id="submitCreateAdmissionBtn" mnemonicParsing="false" onAction="#submitCreateAdmissionButton" prefHeight="35.0" prefWidth="120.0" stylesheets="@application.css" text="SUBMIT" />
+                        <Button id="dark-blue" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#updateCreateAdmissionButton" prefHeight="35.0" prefWidth="120.0" stylesheets="@application.css" text="UPDATE" />
+                        <Button id="dark-blue" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#deleteCreateAdmissionButton" prefHeight="35.0" prefWidth="120.0" stylesheets="@application.css" text="DELETE" />
+                        <Button id="dark-blue" defaultButton="true" layoutX="66.0" layoutY="13.0" mnemonicParsing="false" onAction="#findCreateAdmissionButton" prefHeight="35.0" prefWidth="120.0" stylesheets="@application.css" text="FIND" />
+                        <Button id="dark-blue" fx:id="returnCreateAdmissionBtn" cancelButton="true" layoutX="178.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonAction103" prefHeight="35.0" prefWidth="120.0" stylesheets="@application.css" text="RETURN" />
+                     </items>
+                  </ToolBar>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children></VBox>
+   </center>
+   <top>
+      <VBox prefHeight="46.0" prefWidth="725.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="40.0" prefWidth="725.0">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@webstartreklogo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="44.0" prefWidth="3000.0" style="-fx-background-color: #166582;">
+                    <items>
+                      <Button id="windows7-default" fx:id="logOffHomeButton" mnemonicParsing="false" onAction="#quitPlatformButton" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Log Out" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="About" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button id="windows7-default" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Help" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@help.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="windows7-default" fx:id="returnStdInfoBtn" layoutX="126.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleButtonAction93" prefHeight="25.0" prefWidth="112.0" stylesheets="@application.css" text="Home" textFill="#166582">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" styleClass="logOut">
+                                 <image>
+                                    <Image url="@home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                    </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+</BorderPane>
