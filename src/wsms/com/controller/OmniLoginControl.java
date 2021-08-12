@@ -37,6 +37,11 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Vector;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -198,6 +203,7 @@ import wsms.com.entity.Tills;
 import wsms.com.entity.Transactions;
 import wsms.com.entity.TransferredWithdrawn;
 import wsms.com.entity.Users;
+import wsms.com.process.ResultProcessor;
 import wsms.com.services.CreateAcademicAssessment;
 import wsms.com.services.CreateAcademicHoliday;
 import wsms.com.services.CreateAcademicSession;
@@ -39586,6 +39592,50 @@ public class OmniLoginControl extends Application {
 	//single class result processing
 	@FXML public void eotSingleClassResultProcessing(ActionEvent event) {
 		String stdClassId = eotClassId.getValue();
+				
+		try {
+			ResultProcessor task = new ResultProcessor(new OmniLoginControl(), stdClassId);
+			
+			task.setOnRunning((e) -> {
+				eotDisplay.setText("Processing...");
+			});
+			
+			task.setOnSucceeded((e) -> {
+				String processedResults = task.getValue();
+				//eotDisplay.setText(processedResults);
+				Alert alert = new Alert(Alert.AlertType.INFORMATION);
+				alert.setContentText(processedResults);
+				alert.setHeaderText("Processing Completed");
+				Optional<ButtonType> result = alert.showAndWait();
+				if(result.get() == ButtonType.OK) {
+					alert.close();
+				}
+				else {
+					alert.close();
+				}
+			});
+			
+			ExecutorService es = Executors.newCachedThreadPool();
+			es.execute(task);
+			es.shutdown();
+			
+		}catch(Exception e) {
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.setContentText("An error occurred: "+e.getMessage());
+			alert.setHeaderText("Exception");
+			Optional<ButtonType> result = alert.showAndWait();
+			if(result.get() == ButtonType.OK) {
+				alert.close();
+			}
+			else {
+				alert.close();
+			}
+		}
+	
+	}
+	
+	public int resultProcessor(String stdClassId) {
+		int stdCount = 0;
 		try {
 			if(stdClassId.trim().length() != 0) {
 				String yearEOT, termEOT, stdClassEOT;
@@ -39608,7 +39658,7 @@ public class OmniLoginControl extends Application {
 				emfactoryq.close();
 				
 				//result
-				int stdCount = 0;
+				//int stdCount = 0;
 				LinkedHashSet<String> stdCountList = new LinkedHashSet<>();
 				for(String stdNoEOT : stdListEOT) {
 					
@@ -41420,7 +41470,7 @@ public class OmniLoginControl extends Application {
 				}
 				
 				//output stdcount
-				eotNoStds.setText(String.valueOf(stdCountList.size()));
+				/*eotNoStds.setText(String.valueOf(stdCountList.size()));
 				//eotNoStds.setFont(Color.WHITE);
 				eotDisplay.setText(stdCount +" item(s) sucessfully processed");
 				
@@ -41443,7 +41493,7 @@ public class OmniLoginControl extends Application {
 				eotTermCol.setCellValueFactory(new PropertyValueFactory("term_Data"));
 				eotStatusCol.setCellValueFactory(new PropertyValueFactory("status_Data"));
 				
-				eotResultsProcessingDataTable.setItems(data);
+				eotResultsProcessingDataTable.setItems(data);*/
 				
 			}
 		}
@@ -41460,6 +41510,7 @@ public class OmniLoginControl extends Application {
 				alert.close();
 			}
 		}
+		return stdCount;
 	}
 	
 	//Add class to list
